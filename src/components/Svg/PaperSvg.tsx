@@ -1,4 +1,6 @@
-const PaperSvg = ({ className }: { className?: string }) => (
+import React from 'react';
+import {SvgProps} from "@/utils/types";
+const PaperSvg: React.FC<SvgProps> = ({ className }: { className?: string }) => (
     <div className={className}>
         <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="Paper">

@@ -3,9 +3,12 @@ import Image from 'next/image';
 import MenuSvg from "@/components/Svg/MenuSvg";
 import MenuCloseSvg from "@/components/Svg/MenuCloseSvg";
 import ChevronRightSvg from "@/components/Svg/ChevronRightSvg";
-import { useState } from 'react';
+import React, { useState } from 'react';
+interface NavbarProps {
+    onItemClick: (item: string) => void;
+}
 
-const Navbar = ({ onItemClick }) => {
+const Navbar: React.FC<NavbarProps> = ({ onItemClick }) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [activeItem, setActiveItem] = useState<string>('');
 

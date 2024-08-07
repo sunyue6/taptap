@@ -1,4 +1,6 @@
-const AddSvg = ({ className }: { className?: string }) => (
+import React from 'react';
+import {SvgProps} from "@/utils/types";
+const AddSvg: React.FC<SvgProps>   = ({ className }: { className?: string }) => (
     <div className={className}>
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="Frame" clipPath="url(#clip0_129_4051)">
