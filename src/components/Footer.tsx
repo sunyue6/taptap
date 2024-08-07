@@ -3,7 +3,7 @@ import Image from "next/image";
 const Footer = () => {
     return (
         <footer
-            className="z-50 w-full rounded-t-[40px] flex flex-col md:flex-row items-center justify-center absolute bottom-0 bg-backgroundSecondary py-6 fixed bottom-0">
+            className="z-50 w-full rounded-t-[40px] flex flex-col md:flex-row items-center justify-center bg-backgroundSecondary py-6 fixed bottom-0">
             <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-[1200px] px-4">
                 <div className="flex items-center mb-4 md:mb-0">
                     <Image src="/images/logo_img.png" alt="Logo" width={44} height={37.29}
