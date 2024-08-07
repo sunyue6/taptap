@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import font */
+@import "@fontsource/hanalei-fill";
+@import '@fontsource/covered-by-your-grace';
+@import '@fontsource-variable/montserrat';
