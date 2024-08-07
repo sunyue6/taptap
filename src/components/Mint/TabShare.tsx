@@ -1,12 +1,12 @@
 const TabShare = () => {
     return (
         <div className="flex flex-col">
-            <div className="flex justify-between">
+            <div className="flex flex-col md:flex-row md:justify-between">
                 <input
-                    className="flex-grow mr-[32px] border border-textSecondary rounded-[8px] px-[12px] py-[12px] bg-transparent outline-none placeholder:text-textSecondary"
+                    className="flex-grow mb-[16px] md:mb-0 md:mr-[32px] border border-textSecondary rounded-[8px] px-[12px] py-[12px] bg-transparent outline-none placeholder:text-textSecondary"
                     placeholder="Address"
                 />
-                <div className="relative w-[148px]">
+                <div className="relative w-full md:w-[148px]">
                     <input
                         defaultValue="50"
                         min="1"
@@ -18,7 +18,7 @@ const TabShare = () => {
             </div>
             <div className="flex justify-center mt-[32px]">
                 <button
-                    className="flex items-center font-hanalei text-textPrimary border border-textSecondary rounded-[40px] whitespace-nowrap text-[24px] px-[52px] h-[60px]"
+                    className="flex items-center font-hanalei text-textPrimary border border-textSecondary rounded-[40px] whitespace-nowrap text-[20px] md:text-[24px] px-[52px] h-[60px]"
                 >
                     CLAIM IN 519 DAY
                 </button>

@@ -29,10 +29,11 @@ const Navbar = ({ onItemClick }) => {
     ];
 
     return (
-        <nav className="z-50 flex flex-col items-center rounded-[60px] bg-white/20  backdrop-blur-[32px] shadow-lg max-w-[1200px] min-h-[74px] p-[0px_24px] md:p-[0px_24px] sm:p-[0px_16px] bg-opacity-50 backdrop-filter fixed top-0 left-1/2 transform -translate-x-1/2 w-full mt-[16px]">
+        <nav
+            className="z-50 flex flex-col items-center rounded-[30px] bg-white/20  backdrop-blur-[32px] shadow-lg max-w-[1200px] min-w-[343px] min-h-[74px] p-[0px_24px] md:p-[0px_24px] sm:p-[0px_16px] bg-opacity-50 backdrop-filter fixed top-0 left-1/2 transform -translate-x-1/2 w-full mt-[16px] inset-x-0">
             <div className="flex items-center justify-between w-full h-[74px]">
                 <div className="flex cursor-pointer">
-                    <Image src="/images/logo_img.png" alt="Logo" width={44} height={37.29}  className="mr-[12px]"/>
+                    <Image src="/images/logo_img.png" alt="Logo" width={44} height={37.29} className="mr-[12px]"/>
                     <div className="text-textPrimary font-hanalei hidden md:block text-[30px]">TAPTAP</div>
                 </div>
                 <div className="flex font-hanalei">
@@ -65,7 +66,8 @@ const Navbar = ({ onItemClick }) => {
                     </div>
                 </div>
             </div>
-            <div className={`w-full md:hidden font-hanalei  ${menuOpen ? 'block' : 'hidden'} text-textPrimary mt-[32px]`}>
+            <div
+                className={`w-full md:hidden font-hanalei  ${menuOpen ? 'block' : 'hidden'} text-textPrimary mt-[32px]`}>
                 <ul>
                     {navItems.map((item, index) => (
                         <li
@@ -75,7 +77,7 @@ const Navbar = ({ onItemClick }) => {
                             <div
                                 className="text-[24px]"
                             >{item.label}</div>
-                            <ChevronRightSvg className={`text-current`} />
+                            <ChevronRightSvg className={`text-current`}/>
                         </li>
                     ))}
                 </ul>

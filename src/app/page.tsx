@@ -11,6 +11,7 @@ import MintDetail from "@/components/Mint/MintDetail";
 import Worker from "@/components/Worker/Worker";
 import NoData from "@/components/NoData";
 import FairMintTapTap from "@/components/Mint/FairMintTapTap";
+import Mint from "@/components/Mint/Mint";
 export default function Home() {
   const [titleValue, setTitleValue] = useState('DASHBOARD');
 
@@ -24,15 +25,16 @@ export default function Home() {
             case 'JACKPOT':
                 return <Jackpot />;
             case 'MINT':
-                return <MintDetail />;
-                // return <FairMintTapTap/>
+                // TODO  MintDetail 与 FairMintTapTap展示逻辑
+                return  <Mint/>
             case 'WORKER':
-                return <Worker />;
+                return <NoData/>; // <Worker />
             default:
                 return <Dashboard />;
         }
     };
   return (
+      //              relative min-h-screen overflow-hidden bg-cover bg-center flex flex-col px-4 md:px-16
       <div className="relative min-h-screen overflow-hidden bg-cover bg-center flex flex-col"
            style={{
              background: `linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), url('/images/bg_img.png')`,
@@ -40,15 +42,15 @@ export default function Home() {
              backgroundPosition: 'center',
            }}
       >
-        <Navbar onItemClick={handleItemClick}/>
-        <TitlePage value={titleValue}/>
+          <Navbar onItemClick={handleItemClick}/>
+          <TitlePage value={titleValue}/>
           {renderContent()}
           {/*TODO 展示 NoData组件逻辑*/}
           {/*<NoData/>*/}
-        <OverlayBackground/>
-        {/*  TODO ICON消失*/}
-        <PositionIcon/>
-        <Footer/>
+          <OverlayBackground/>
+          {/*  TODO ICON*/}
+          <PositionIcon/>
+          <Footer/>
       </div>
   );
 }
