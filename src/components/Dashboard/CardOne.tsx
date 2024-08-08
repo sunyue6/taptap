@@ -1,9 +1,8 @@
 import GlobalRankSvg from "@/components/Svg/GlobalRankSvg";
 import QuestionSvg from "@/components/Svg/QuestionSvg";
-import Tooltip from "@/components/Tooltip";
+import Tooltip from "@/components/Common/Tooltip";
 const CardOne =()=> {
     return (
-        //  min-w-[343px] w-full rounded-[16px] bg-[rgba(240,255,230,0.1)] backdrop-blur-[16px] p-5 text-[16px] leading-[18px] font-[600]
         <div className="mx-auto font-montserrat max-w-[800px] min-w-[343px] w-full rounded-[16px] bg-[rgba(240,255,230,0.1)] backdrop-blur-[16px] p-[32px] text-[16px] leading-[18px] font-[600] text-textSecondary">
             <div  className="flex justify-between items-center text-[20px] font-[700] mb-[32px] text-textPrimary">
                 <div className="flex justify-between items-center">

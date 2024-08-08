@@ -29,7 +29,7 @@ const TabCreate = () => {
                         type="number"
                         min="1"
                         max="100"
-                        className="
+                        className=" outline-none
                         border border-textSecondary rounded-[8px] h-[42px] p-[12px] bg-transparent w-[100px] mmd:w-[148px]"/>
                 </div>
             </div>
@@ -61,7 +61,7 @@ const TabCreate = () => {
                         type="number"
                         min="1"
                         max="100"
-                        className="
+                        className=" outline-none
                         border border-textSecondary rounded-[8px] h-[42px] p-[12px] bg-transparent w-[100px] mmd:w-[148px]"/>
                 </div>
             </div>
