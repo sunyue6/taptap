@@ -10,7 +10,7 @@ interface TooltipProps {
 const Tooltip: React.FC<TooltipProps> = ({ children, content, position = 'top' }) => {
     return (
         <div className="relative group inline-block">
-            <div className="absolute z-10 hidden group-hover:block group-focus:block">
+            <div className="absolute hidden group-hover:block group-focus:block">
                 <div
                     className={`absolute bg-[#0C101B] text-[#FFF] text-xs rounded-[12px] py-[12px] px-[12px] whitespace-normal ${getTooltipPositionClasses(position)} flex items-center justify-center`}
                     style={{ width: '311px', lineHeight: '18px', fontSize: '12px' }}

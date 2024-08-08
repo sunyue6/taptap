@@ -21,15 +21,15 @@ const Tabs: React.FC<TabsProps> = ({ tabs }) => {
                         className={`flex-1 py-2 text-[16px] font-medium transition-colors ${
                             index === activeTab
                                 ? 'border-b-2 border-success text-success'
-                                : 'border-b-2 border-transparent text-textSecondary hover:text-success'
-                        } ${index < tabs.length - 1 ? 'mr-4' : ''}`} // Add margin-right to all but the last tab
+                                : 'border-b-2  text-textSecondary hover:text-success'
+                        } ${index < tabs.length - 1 ? '' : ''}`} // Add margin-right to all but the last tab
                         onClick={() => setActiveTab(index)}
                     >
                         {tab.label}
                     </button>
                 ))}
             </div>
-            <div className="p-4 rounded-b-lg mt-[32px]">
+            <div className="rounded-b-lg mt-[24px]">
                 {tabs[activeTab]?.content}
             </div>
         </div>
