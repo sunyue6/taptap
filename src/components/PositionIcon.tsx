@@ -4,9 +4,12 @@ import CloseSvg from "@/components/Svg/CloseSvg";
 import CloseSelectedSvg from "@/components/Svg/CloseSelectedSvg";
 const PositionIcon = () => {
     return (
-        <div className="z-20 max-w-[1200px] mx-auto w-full absolute bottom-[200px] left-0 right-0">
-            <div className="flex flex-row md:flex-col space-x-4 md:space-x-0 absolute left-1/2 top-0 transform -translate-x-1/2 md:left-auto md:right-0 md:top-auto md:translate-x-0">
-                <div className="group relative">
+        <div className="max-w-[1200px] min-w-[343px] w-full mx-auto relative py-[24px]     mt-[24px] mb-[60px]
+                                                                             mmd:py-[60px] mmd:my-0">
+            <div className="flex justify-center flex-row
+                                                mmd:flex-col mmd:absolute bottom-[420px] right-[16px]">
+                <div className="group relative mr-[20px]
+                                               mmd:mr-0 mmd:mb-[20px]">
                     <TelegramSvg className="block"/>
                     <TelegramSelectedSvg className="hidden group-hover:block absolute inset-0"/>
                 </div>
