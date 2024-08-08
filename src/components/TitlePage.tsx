@@ -4,7 +4,10 @@ interface TitlePageProps {
 }
 const TitlePage: React.FC<TitlePageProps> = ({ value }) => {
     return (
-        <div className="z-40 w-full flex items-center justify-center text-textPrimary mt-[94px] font-coveredByYourGrace text-[64px] md:text-[128px] py-[24px] md:py-[80px] leading-[104px]">
+        <div className="w-full flex items-center justify-center text-textPrimary font-coveredByYourGrace h-[104px] leading-[104px]
+        text-[64px]      mt-[24px]     mb-[24px]
+        mmd:text-[128px] mmd:mt-[80px] mmd:mb-[80px]
+        ">
             {value}
         </div>
     )
