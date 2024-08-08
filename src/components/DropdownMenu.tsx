@@ -13,14 +13,14 @@ const DropdownMenu: FC<DropdownMenuProps> = ({ onClose }) => {
                 className="flex items-center w-full text-left p-[16px] rounded-[12px] hover:bg-backgroundGray whitespace-nowrap"
                 onClick={onClose}
             >
-                <ShareSvg className="mr-[8px]" />
+                <ShareSvg className="mr-[8px] w-[16px] h-[16px] mmd:w-[24px] mmd:h-[24px]" />
                 Share on Twitter
             </button>
             <button
                 className="flex items-center w-full text-left p-[16px] rounded-[12px] hover:bg-backgroundGray whitespace-nowrap"
                 onClick={onClose}
             >
-                <AddSvg className="mr-[8px]" />
+                <AddSvg className="mr-[8px] w-[16px] h-[16px] mmd:w-[24px] mmd:h-[24px]" />
                 Add Token to Wallet
             </button>
         </div>

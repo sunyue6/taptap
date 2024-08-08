@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import DownSvg from "@/components/Svg/DownSvg";
 import WorkerSvg from "@/components/Svg/WorkerSvg";
 import UpSvg from "@/components/Svg/UpSvg";
-import TabTable from "@/components/Common/TapTable/TabTable";
+import TapTable from "@/components/Common/TapTable/TapTable";
 import Image from "next/image";
 import ProgressBar from "@/components/Common/ProgressBar";
 import IconButton from "@/components/Common/Button/IconButton";
@@ -17,19 +17,19 @@ const WorkerItem = () => {
     const headers = ['Worker', 'cRank', 'Reward'];
     const rows = [
         { Worker: (<div
-                className="w-[115px] flex items-center rounded-[100px] bg-backgroundPrimary py-[4px] px-[6px] text-[16px] font-[500]">
-                <Image src="/worker_img.png" alt="Logo" width={20} height={20} className="mr-[12px]"/>
+                className="w-[105px] flex items-center rounded-[100px] bg-backgroundPrimary py-[4px] px-[6px] text-[16px] font-[500]">
+                <Image src="/worker_img.png" alt="Logo" width={20} height={20} className="mr-[8px]"/>
                 #00004
             </div>), cRank: '#315,739,255', Reward: '4,722 TAP'
         },
         {Worker: (<div
-                className="w-[115px] flex items-center rounded-[100px] bg-backgroundPrimary py-[4px] px-[6px] text-[16px] font-[500]">
-                <Image src="/worker_img.png" alt="Logo" width={20} height={20} className="mr-[12px]"/>
+                className="w-[105px] flex items-center rounded-[100px] bg-backgroundPrimary py-[4px] px-[6px] text-[16px] font-[500]">
+                <Image src="/worker_img.png" alt="Logo" width={20} height={20} className="mr-[8px]"/>
                 #00004
             </div>), cRank: '#315,739,255', Reward: '4,722 TAP'},
         {Worker: (<div
-                className="w-[115px] flex items-center rounded-[100px] bg-backgroundPrimary py-[4px] px-[6px] text-[16px] font-[500]">
-                <Image src="/worker_img.png" alt="Logo" width={20} height={20} className="mr-[12px]"/>
+                className="w-[105px] flex items-center rounded-[100px] bg-backgroundPrimary py-[4px] px-[6px] text-[16px] font-[500]">
+                <Image src="/worker_img.png" alt="Logo" width={20} height={20} className="mr-[8px]"/>
                 #00004
             </div>), cRank: '#315,739,255', Reward: '4,722 TAP'},
     ];
@@ -37,23 +37,23 @@ const WorkerItem = () => {
 
     return (
         <div className="w-full mx-auto max-w-[800px] min-w-[343px] rounded-[32px] bg-backgroundGray backdrop-blur-[16px] font-montserrat font-[700]
-             px-[20px] pt-[24px] mmd:p-[32px]
+             p-[20px] mmd:p-[32px]
              text-[16px] text-textSecondary
         ">
             <div className="flex justify-between items-center
                 text-[20px] leading-[18px] text-textPrimary
             ">
-                <div className="flex">
-                    <WorkerSvg className="mr-[8px]"/>Worker #0004
+                <div className="flex items-center">
+                    <WorkerSvg className="mr-[8px] w-[16px] h-[16px] mmd:w-[24px] mmd:h-[24px]"/>Worker #0004
                 </div>
                 <div onClick={handleToggle} className="cursor-pointer">
-                    {isUpSvg ? <UpSvg/> : <DownSvg/>}
+                    {isUpSvg ? <UpSvg className="w-[16px] h-[16px] mmd:w-[24px] mmd:h-[24px]"/> : <DownSvg className="w-[16px] h-[16px] mmd:w-[24px] mmd:h-[24px]"/>}
                 </div>
             </div>
             {
                 isUpSvg && (
-                    <div>
-                        <TabTable headers={headers} rows={rows}/>
+                    <div className="mt-[32px]">
+                        <TapTable headers={headers} rows={rows}/>
                         <div className="h-[1px]  max-w-[736px] min-w-[303px] bg-backgroundThird mt-[32px] mb-[32px]"></div>
                         <div className="flex justify-between items-center mb-[16px] mmd:mb-[20px]">
                             <div>
@@ -84,7 +84,6 @@ const WorkerItem = () => {
                             {/* TODO 展示逻辑 */}
                             {/*<TextButton text="CLAIM IN LESS THAN 1 DAY" />*/}
                         </div>
-
                     </div>
                 )
             }
