@@ -1,3 +1,5 @@
+import TextButton from "@/components/Common/Button/TextButton";
+
 const TabStake = () => {
     return (
         <div className="flex flex-col">
@@ -20,11 +22,7 @@ const TabStake = () => {
                 </div>
             </div>
             <div className="flex justify-center mt-[32px]">
-                <button
-                    className="flex items-center font-hanalei text-textPrimary border border-textSecondary rounded-[40px] whitespace-nowrap text-[20px] md:text-[24px] px-[52px] h-[60px]"
-                >
-                    CLAIM ON
-                </button>
+                <TextButton text="CLAIM ON"/>
             </div>
         </div>
     )

@@ -1,3 +1,5 @@
+import TextButton from "@/components/Common/Button/TextButton";
+
 const TabShare = () => {
     return (
         <div className="flex flex-col">
@@ -17,11 +19,7 @@ const TabShare = () => {
                 </div>
             </div>
             <div className="flex justify-center mt-[32px]">
-                <button
-                    className="flex items-center font-hanalei text-textPrimary border border-textSecondary rounded-[40px] whitespace-nowrap text-[20px] md:text-[24px] px-[52px] h-[60px]"
-                >
-                    CLAIM IN 519 DAY
-                </button>
+                <TextButton text="CLAIM IN 519 DAY" />
             </div>
         </div>
     )
