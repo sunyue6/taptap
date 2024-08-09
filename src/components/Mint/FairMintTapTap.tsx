@@ -68,7 +68,7 @@ const FairMintTapTap = () => {
                     <div className="flex items-center">Fair mint ends in
                         <Tooltip
                             content="TapTap fair mint starts with a timer that counts down from 72 hours. Each fair mint resets the timer. When the timer reaches zero, the fair mint ends."
-                            position="top">
+                            position="bottom">
                             <QuestionSvg className="ml-[4px] w-[16px] h-[16px] mmd:w-[24px] mmd:h-[24px]"/>
                         </Tooltip>
                     </div>
@@ -78,7 +78,7 @@ const FairMintTapTap = () => {
                     <div className="flex items-center">Fair mint Fee
                         <Tooltip
                             content="The fee to participate in the fair mint is used as follows: 90% for TAPTAP buyback and 10% for Vault rewards."
-                            position="top">
+                            position="bottom">
                             <QuestionSvg className="ml-[4px] w-[16px] h-[16px] mmd:w-[24px] mmd:h-[24px]"/>
                         </Tooltip>
                     </div>

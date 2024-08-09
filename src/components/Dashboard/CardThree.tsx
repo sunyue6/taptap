@@ -9,7 +9,7 @@ const CardThree =()=> {
             </div>
             <div  className="flex justify-between items-center py-[16px]">
                 <div  className="flex items-center">AMP
-                    <Tooltip content="Reward Amplifier (AMP) is a time-dependent part of TAPTAP Mint Reward calculation. It starts at 3,000 at Genesis and decreases by 1 every day until it reaches 1"  position="top">
+                    <Tooltip content="Reward Amplifier (AMP) is a time-dependent part of TAPTAP Mint Reward calculation. It starts at 3,000 at Genesis and decreases by 1 every day until it reaches 1"  position="bottom">
                         <QuestionSvg className="ml-[4px]"/>
                     </Tooltip>
                 </div>
@@ -17,7 +17,7 @@ const CardThree =()=> {
             </div>
             <div  className="flex justify-between  items-center">
                 <div  className="flex items-center">EAA
-                    <Tooltip content="Early Adopter Amplifier (EAA) is a part of TAPTAP Mint Reward calculation which depends on current Global Rank. EAA starts from 10% and decreases in a linear fashion by 0.1% per each 100,000 increase in Global Rank." position="top">
+                    <Tooltip content="Early Adopter Amplifier (EAA) is a part of TAPTAP Mint Reward calculation which depends on current Global Rank. EAA starts from 10% and decreases in a linear fashion by 0.1% per each 100,000 increase in Global Rank." position="bottom">
                         <QuestionSvg className="ml-[4px]" />
                     </Tooltip>
 

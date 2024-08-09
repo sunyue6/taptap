@@ -13,7 +13,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ onItemClick }) => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [activeItem, setActiveItem] = useState<string>('');
+    const [activeItem, setActiveItem] = useState<string>('DASHBOARD');
 
     const handleToggleMenu = () => {
         setMenuOpen(prevState => !prevState);
