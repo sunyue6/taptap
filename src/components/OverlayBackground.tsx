@@ -8,7 +8,6 @@ const OverlayBackground = () => {
                      bottom: '-20%',
                      right: '0',
                  }}>
-                >
                 <g filter="url(#filter0_f_125_2850)">
                     <path
                         d="M1517.87 227.417C1035.58 47.0296 415.766 226.16 154 488.724L1218.32 1000.17L1517.87 227.417Z"
