@@ -4,7 +4,7 @@ import CloseSvg from "@/components/Svg/CloseSvg";
 import CloseSelectedSvg from "@/components/Svg/CloseSelectedSvg";
 const PositionIcon = () => {
     return (
-        <div className="max-w-[1200px] min-w-[343px] w-full mx-auto relative py-[24px]     mt-[24px] mb-[60px]
+        <div className="z-10 max-w-[1200px] min-w-[343px] w-full mx-auto relative py-[24px]     mt-[24px] mb-[60px]
                                                                              mmd:py-[60px] mmd:my-0">
             <div className="flex justify-center flex-row
                                                 mmd:flex-col mmd:absolute bottom-[420px] right-[16px]">

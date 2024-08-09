@@ -4,6 +4,7 @@ const OverlayBackground = () => {
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="absolute"
+                style={{ width: "1671.87", height: "1153.78", bottom: "-20%", left: "10%" }}
                 viewBox="0 0 1672 1155"
                 fill="none"
             >
@@ -42,6 +43,7 @@ const OverlayBackground = () => {
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="absolute"
+                style={{ width: "1439.1", height: "1013.55", bottom: "-20%", left: "20%" }}
                 viewBox="0 0 1440 1014"
                 fill="none"
             >
@@ -80,6 +82,7 @@ const OverlayBackground = () => {
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="absolute"
+                style={{ width: "1939.85", height: "1387.45", bottom: "-20%", left: "15%" }}
                 viewBox="0 0 1940 1388"
                 fill="none"
             >
@@ -118,6 +121,7 @@ const OverlayBackground = () => {
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="absolute"
+                style={{ width: "1073.77", height: "601.736", bottom: "-20%", right: "10%" }}
                 viewBox="0 0 1074 603"
                 fill="none"
             >

@@ -10,6 +10,7 @@ interface NavbarProps {
     onItemClick: (item: string) => void;
 }
 
+
 const Navbar: React.FC<NavbarProps> = ({ onItemClick }) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [activeItem, setActiveItem] = useState<string>('');
@@ -33,6 +34,7 @@ const Navbar: React.FC<NavbarProps> = ({ onItemClick }) => {
         { label: 'SWAP', value: 'SWAP' },
         { label: 'JACKPOT', value: 'JACKPOT' }
     ];
+
 
     return (
         <nav className="z-50 fixed top-[16px] left-0 w-full text-textPrimary font-hanalei px-[16px]">
