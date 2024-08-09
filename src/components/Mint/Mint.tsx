@@ -4,7 +4,9 @@ const Mint = () => {
     return (
         <div>
             {/*TODO  MintDetail 与 FairMintTapTap展示逻辑*/}
-            <MintDetail/>
+            <div className="mb-[12px]">
+                <MintDetail/>
+            </div>
             <FairMintTapTap/>
         </div>
     )

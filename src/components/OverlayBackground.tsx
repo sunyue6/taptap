@@ -12,7 +12,7 @@ const OverlayBackground = () => {
                     <path
                         d="M1517.87 227.417C1035.58 47.0296 415.766 226.16 154 488.724L1218.32 1000.17L1517.87 227.417Z"
                         fill="#E91898"
-                        fill-opacity="0.5"
+                        fillOpacity="0.5"
                     />
                 </g>
                 <defs>
@@ -23,9 +23,9 @@ const OverlayBackground = () => {
                         width="1671.87"
                         height="1153.78"
                         filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB"
+                        colorInterpolationFilters="sRGB"
                     >
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
                         <feBlend
                             mode="normal"
                             in="SourceGraphic"
@@ -51,7 +51,7 @@ const OverlayBackground = () => {
                     <path
                         d="M1285.1 213.66C886.179 64.9392 371.911 216.864 154 437.056L1033.92 859.884L1285.1 213.66Z"
                         fill="#0F00B7"
-                        fill-opacity="0.5"
+                        fillOpacity="0.5"
                     />
                 </g>
                 <defs>
@@ -62,9 +62,9 @@ const OverlayBackground = () => {
                         width="1439.1"
                         height="1013.55"
                         filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB"
+                        colorInterpolationFilters="sRGB"
                     >
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
                         <feBlend
                             mode="normal"
                             in="SourceGraphic"
@@ -90,7 +90,7 @@ const OverlayBackground = () => {
                     <path
                         d="M1785.86 239.549C1243.26 18.2986 494.032 259.577 154 600.54L1337.09 1233.79L1785.86 239.549Z"
                         fill="#E91898"
-                        fill-opacity="0.1"
+                        fillOpacity="0.1"
                     />
                 </g>
                 <defs>
@@ -101,9 +101,9 @@ const OverlayBackground = () => {
                         width="1939.85"
                         height="1387.45"
                         filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB"
+                        colorInterpolationFilters="sRGB"
                     >
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
                         <feBlend
                             mode="normal"
                             in="SourceGraphic"
@@ -129,7 +129,7 @@ const OverlayBackground = () => {
                     <path
                         d="M979.767 120.072C613.455 44.5166 222.664 149.639 94.0001 286.011L924.452 508.529L979.767 120.072Z"
                         fill="url(#paint0_linear_125_2853)"
-                        fill-opacity="0.5"
+                        fillOpacity="0.5"
                     />
                 </g>
                 <defs>
@@ -140,9 +140,9 @@ const OverlayBackground = () => {
                         width="1073.77"
                         height="601.736"
                         filterUnits="userSpaceOnUse"
-                        color-interpolation-filters="sRGB"
+                        colorInterpolationFilters="sRGB"
                     >
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
                         <feBlend
                             mode="normal"
                             in="SourceGraphic"
@@ -162,8 +162,8 @@ const OverlayBackground = () => {
                         y2="272.441"
                         gradientUnits="userSpaceOnUse"
                     >
-                        <stop stop-color="#FF7A00" />
-                        <stop offset="1" stop-color="#FFC236" />
+                        <stop stopColor="#FF7A00" />
+                        <stop offset="1" stopColor="#FFC236" />
                     </linearGradient>
                 </defs>
             </svg>

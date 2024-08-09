@@ -34,7 +34,7 @@ const FairMintTapTap = () => {
             <div
                 className="text-white mx-auto font-montserrat max-w-[800px] min-w-[343px] w-full rounded-[16px] bg-[rgba(240,255,230,0.1)] backdrop-blur-[16px] p-[32px] text-[16px] leading-[18px] font-[600] text-textSecondary">
                 <div className="flex justify-between items-center text-[20px] font-[700] mb-[32px] text-textPrimary">
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center h-auto leading-auto mmd:h-[24px] mmd:leading-[24px]">
                         <TitleIcSvg className="mr-[8px] w-[16px] h-[16px] mmd:w-[24px] mmd:h-[24px]"/>
                         Fair Mint TAPTAP
                     </div>

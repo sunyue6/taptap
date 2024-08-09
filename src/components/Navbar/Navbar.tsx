@@ -46,7 +46,7 @@ const Navbar: React.FC<NavbarProps> = ({ onItemClick }) => {
                         <div className="text-textPrimary hidden mmd:block text-[30px]">TAPTAP</div>
                     </div>
                     <div className="flex">
-                        <ul className="hidden mmd:flex space-x-4">
+                        <ul className="hidden mmd:flex space-x-4 mmd:mr-[80px]">
                             {navItems.map(item => (
                                 <li
                                     key={item.value}
@@ -62,7 +62,7 @@ const Navbar: React.FC<NavbarProps> = ({ onItemClick }) => {
                             {/*<BaseButton text="WALLET CONNECT"/>*/}
                             <WalletAd/>
                         </div>
-                        <div className="mmd:hidden flex items-center">
+                        <div className="mmd:hidden flex items-center ml-[12px] mmd:ml-0">
                             {menuOpen ? (
                                 <div onClick={handleToggleMenu}>
                                     <MenuCloseSvg/>

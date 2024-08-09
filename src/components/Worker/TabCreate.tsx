@@ -12,7 +12,7 @@ const TabCreate = () => {
             <div className="flex justify-between items-center mb-[32px] font-[700]
                 text-[20px] leading-[18px] text-textPrimary
             ">
-                <div className="flex items-center">
+                <div className="flex items-center h-auto leading-auto mmd:h-[24px] mmd:leading-[24px]">
                     <WorkerSvg className="mr-[8px] w-[16px] h-[16px] mmd:w-[24px] mmd:h-[24px]"/>Worker
                 </div>
                 <div>
