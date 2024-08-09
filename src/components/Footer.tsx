@@ -4,7 +4,7 @@ const Footer = () => {
     return (
 
         <footer
-            className="z-10 w-full bg-backgroundSecondary py-[24px] rounded-t-[20px]
+            className="z-10 w-full bg-backgroundSecondary py-[24px] rounded-t-[20px] px-[16px]
                                                                mmd:rounded-t-[40px]">
             <div className="mx-auto flex flex-col
                                     mmd:flex-row items-center justify-between max-w-[1200px]">

@@ -10,10 +10,12 @@ interface KLineChartProps {
 
 const KLineChart: React.FC<KLineChartProps> = ({ data }) => {
     const chartRef = useRef<HTMLDivElement>(null);
+    const chartInstanceRef = useRef<echarts.ECharts | null>(null);
 
     useEffect(() => {
         if (chartRef.current) {
             const chartInstance = echarts.init(chartRef.current);
+            chartInstanceRef.current = chartInstance;
 
             const option = {
                 backgroundColor: '#0C101B', // 设置背景颜色为黑色
@@ -52,8 +54,20 @@ const KLineChart: React.FC<KLineChartProps> = ({ data }) => {
 
             chartInstance.setOption(option);
 
+            // 监听窗口调整大小事件
+            const handleResize = () => {
+                if (chartInstanceRef.current) {
+                    chartInstanceRef.current.resize();
+                }
+            };
+
+            window.addEventListener('resize', handleResize);
+
             return () => {
-                chartInstance.dispose();
+                if (chartInstanceRef.current) {
+                    chartInstanceRef.current.dispose();
+                }
+                window.removeEventListener('resize', handleResize);
             };
         }
     }, [data]);

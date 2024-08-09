@@ -14,7 +14,7 @@ import BaseButton from "@/components/Common/Button/BaseButton";
 const SwapInfo = () => {
     return (
         <div
-            className="z-10 mx-auto font-montserrat w-[343px] mmd:w-[404px] h-[444px] rounded-[32px] bg-[rgba(240,255,230,0.1)] backdrop-blur-[16px] p-[16px] text-[16px] leading-[18px] font-[600] text-textSecondary">
+            className="z-10 mx-auto w-full font-montserrat h-[444px] rounded-[32px] bg-[rgba(240,255,230,0.1)] backdrop-blur-[16px] p-[16px] text-[16px] leading-[18px] font-[600] text-textSecondary">
             <div className="flex justify-start items-center text-[20px] font-[700] mb-[16px] text-textPrimary">
                 <div
                     className="w-[24px] h-[24px] rounded-full bg-[rgba(255,255,255,0.20)] flex justify-center items-center mr-[8px]">
