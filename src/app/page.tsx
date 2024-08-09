@@ -22,7 +22,6 @@ export default function Home() {
             case 'DASHBOARD':
                 return <Dashboard/>;
             case 'MINT':
-                // TODO  MintDetail 与 FairMintTapTap展示逻辑
                 return  <Mint/>
             case 'WORKER':
                 return <Worker/>;
@@ -47,7 +46,7 @@ export default function Home() {
           <div>
               <Navbar onItemClick={handleItemClick}/>
           </div>
-          <div className="z-50 container max-w-[1232px] min-w-[375px] mx-auto flex-grow px-[16px] mt-[90px]">
+          <div className="z-10 container max-w-[1232px] min-w-[375px] mx-auto flex-grow px-[16px] mt-[90px]">
               <TitlePage value={titleValue}/>
               {renderContent()}
               {/*TODO 展示 NoData组件逻辑*/}
