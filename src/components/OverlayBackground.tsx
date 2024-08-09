@@ -66,7 +66,7 @@ const OverlayBackground = () => {
             <svg xmlns="http://www.w3.org/2000/svg" width="1074" height="603" viewBox="0 0 1074 603" fill="none"
                  style={{
                      position: 'absolute',
-                     bottom: '-10%',
+                     bottom: '-40%',
                      right: '10%',
                  }}>
                 <g filter="url(#filter0_f_125_2853)">

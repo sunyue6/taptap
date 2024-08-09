@@ -39,7 +39,7 @@ export default function Home() {
            style={{
              background: `linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), url('/bg_img.png')`,
              backgroundSize: 'cover',
-             backgroundPosition: 'center',
+             backgroundPosition: 'top center',
            }}
       >
           <OverlayBackground/>
