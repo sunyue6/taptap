@@ -2,7 +2,7 @@ import React from 'react';
 
 interface TableProps {
     headers: string[];
-    rows: { [key: string]: string }[];
+    rows:{ [key: string]: React.ReactNode }[];
 }
 
 const TapTable: React.FC<TableProps> = ({ headers, rows }) => {
