@@ -5,7 +5,7 @@ const OverlayBackground = () => {
             <svg xmlns="http://www.w3.org/2000/svg" width="1672" height="1155" viewBox="0 0 1672 1155" fill="none"
                  style={{
                      position: 'absolute',
-                     bottom: '-20%',
+                     bottom: '-50%',
                      right: '0',
                  }}>
                 <g filter="url(#filter0_f_125_2850)">
@@ -25,7 +25,7 @@ const OverlayBackground = () => {
             <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1014" viewBox="0 0 1440 1014" fill="none"
                  style={{
                      position: 'absolute',
-                     bottom: '-20%',
+                     bottom: '-50%',
                      left: '-10%',
                  }}>
                 <g filter="url(#filter0_f_125_2851)">
@@ -45,7 +45,7 @@ const OverlayBackground = () => {
             <svg xmlns="http://www.w3.org/2000/svg" width="1940" height="1388" viewBox="0 0 1940 1388" fill="none"
                  style={{
                      position: 'absolute',
-                     bottom: '-20%',
+                     bottom: '-50%',
                      left: '-20%',
                  }}
             >
