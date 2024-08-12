@@ -43,7 +43,7 @@ const Navbar: React.FC<NavbarProps> = ({ onItemClick }) => {
                 className={`max-w-[1200px] min-w-[343px] bg-backgroundPrimary backdrop-blur-[32px]  shadow-lg ${menuOpen ? 'rounded-[30px]' : 'rounded-[60px]' }   mx-auto px-[16px] mmd:px-[24px]`}>
                 <div className="flex items-center justify-between w-full h-[60px] mmd:h-[74px]">
                     <div className="flex items-center cursor-pointer">
-                        <Image src="/logo_img.png" alt="Logo" width={44} height={37.29} className="mr-[12px]"/>
+                        <Image src="/logo_img.png" alt="Logo" width={44} height={37.29} className="mr-[12px] mt-[15px]"/>
                         <div className="text-textPrimary hidden mmd:block text-[30px]">TAPTAP</div>
                     </div>
                     <div className="flex">

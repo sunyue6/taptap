@@ -10,8 +10,9 @@ const Footer = () => {
                 <div className="flex items-center mb-[12px]
                                                   mmd:mb-0">
                     <Image src="/logo_img.png" alt="Logo" width={44} height={37.29}
-                           className="object-contain w-[28px]     h-[23px]
-                                                     mmd:w-[44px] mmd:h-[37.29px]"/>
+                           className="mt-[15px] hidden mmd:block"/>
+                    <Image src="/mo_mini_logo.png" alt="Logo" width={28} height={23}
+                           className="block mmd:hidden"/>
                     <div className="text-textPrimary font-hanalei text-[20px]     ml-[4px]
                                                                   mmd:text-[30px] mmd:ml-[12px]">
                         TAPTAP
