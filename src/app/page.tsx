@@ -1,5 +1,5 @@
 "use client"
-import {useState} from "react";
+import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar/Navbar";
 import TitlePage from "@/components/TitlePage";
 import OverlayBackground from "@/components/OverlayBackground";
@@ -18,6 +18,10 @@ export default function Home() {
   const handleItemClick = (value: string) => {
     setTitleValue(value);
   };
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [titleValue]);
     const renderContent = () => {
         switch (titleValue) {
             case 'DASHBOARD':
