@@ -144,11 +144,11 @@ const Jackpot = () => {
             <div className="h-[1px]  max-w-[736px] min-w-[303px] bg-backgroundThird mt-[32px] mb-[32px]"></div>
             <div className="hidden mmd:block font-[600]">
                 <div className="flex justify-between items-center mb-[16px] mmd:mb-[20px]">
-                    <div>Your Rank / Global Rank</div>
+                    <div className="text-[16px]">Your Rank / Global Rank</div>
                     <div className="text-[20px] text-textPrimary">323,23 / 315,739,255</div>
                 </div>
                 <div className="flex justify-between items-center mb-[16px] mmd:mb-[20px]">
-                    <div>Your Earnings</div>
+                    <div className="text-[16px]">Your Earnings</div>
                     <div className="text-[20px] text-textPrimary">0.00 ETH</div>
                 </div>
             </div>

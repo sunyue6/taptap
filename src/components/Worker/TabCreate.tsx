@@ -93,7 +93,7 @@ const TabCreate = () => {
                     Fair mint Fee
                     <Tooltip
                         content="The fee to participate in the fair mint is used as follows: 90% for TAPTAP buyback and 10% for Vault rewards."
-                        position="bottom">
+                        position="bottom" leftClass="left-[-130px]">
                         <QuestionSvg className="ml-[4px]"/>
                     </Tooltip>
                 </div>
