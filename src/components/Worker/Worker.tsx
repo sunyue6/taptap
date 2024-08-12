@@ -6,11 +6,11 @@ const Worker = () => {
     const tabData = [
         {
             label: 'Create',
-            content: <TabWorker/>, //TODO TabCreate
+            content: <TabCreate/>,
         },
         {
             label: 'My Workers(4)',
-            content: <TabWorker/>, // TabWorker
+            content: <TabWorker/>,
         },
 
     ]
