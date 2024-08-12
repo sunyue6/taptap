@@ -1,16 +1,37 @@
-import React from "react";
-import CopySvg from "@/components/Svg/CopySvg";
+import React, {useEffect, useRef, useState} from "react";
 import MoreSvg from "@/components/Svg/MoreSvg";
 import QuestionSvg from "@/components/Svg/QuestionSvg";
 import EthLogoSvg from "@/components/Svg/EthLogoSvg";
 import Image from "next/image";
 import TapTable from "@/components/Common/TapTable/TapTable";
 import IconButton from "@/components/Common/Button/IconButton";
-import GlobalRankSvg from "@/components/Svg/GlobalRankSvg";
+import KeySvg from "@/components/Svg/KeySvg";
+import DropdownMenu from "@/components/DropdownMenu";
+import Tooltip from "@/components/Common/Tooltip";
+
 
 
 
 const Jackpot = () => {
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const dropdownRef = useRef<HTMLDivElement>(null);
+
+    const toggleDropdown = () => {
+        setIsDropdownOpen(!isDropdownOpen);
+    };
+    const handleClickOutside = (event: MouseEvent) => {
+        if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+            setIsDropdownOpen(false);
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
+
     const rows = [
         { Worker: (<div
                 className="flex items-center justify-start rounded-[100px] bg-backgroundPrimary py-[4px] px-[6px] text-[16px] mmd:text-[20px] font-[500] text-success">
@@ -56,23 +77,33 @@ const Jackpot = () => {
                 <div className="flex items-center h-auto leading-auto mmd:h-[24px] mmd:leading-[24px]">
                     <div
                         className="w-[24px] h-[24px] rounded-full bg-[rgba(255,255,255,0.20)] flex justify-center items-center mr-[8px]">
-                        <CopySvg/>
+                        <KeySvg/>
                     </div>
                     {/*<CopySvg className="mr-[8px] w-[16px] h-[16px] mmd:w-[24px] mmd:h-[24px]"/>*/}
                     Vualt Rewards Winner
                 </div>
-                <div>
-                    <MoreSvg className="w-[16px] h-[16px] mmd:w-[24px] mmd:h-[24px]"/>
+                <div className="relative" ref={dropdownRef}>
+                    <div onClick={toggleDropdown} className="cursor-pointer">
+                        <MoreSvg className="w-[24px] h-[24px]"/>
+                    </div>
+                    {isDropdownOpen && (
+                        <DropdownMenu onClose={() => setIsDropdownOpen(false)}/>
+                    )}
                 </div>
             </div>
             <div className="hidden mmd:block">
                 <div className="flex">
                     <div className="w-1/2">
                         <div className="flex items-center">Fair mint ends in
-                            <QuestionSvg className="ml-[4px]"/>
+                            <Tooltip
+                                content="TapTap fair mint starts with a timer that counts down from 72 hours. Each fair mint resets the timer. When the timer reaches zero, the fair mint ends."
+                                position="bottom">
+                                {/*w-[16px] h-[16px] mmd:w-[24px] mmd:h-[24px]*/}
+                                <QuestionSvg className="ml-[4px]"/>
+                            </Tooltip>
                         </div>
                         <div className="text-textPrimary text-[48px]">
-                            71 :59: 59
+                            24 :59: 59
                         </div>
                     </div>
                     <div className="w-1/2">
@@ -89,10 +120,15 @@ const Jackpot = () => {
                 <div className="mb-[32px]">
                     <div className="flex items-center text-[14px] mb-[8px]"
                     >Fair mint ends in
-                        <QuestionSvg className="ml-[4px]"/>
+                        <Tooltip
+                            content="TapTap fair mint starts with a timer that counts down from 72 hours. Each fair mint resets the timer. When the timer reaches zero, the fair mint ends."
+                            position="bottom">
+                            {/*w-[16px] h-[16px] mmd:w-[24px] mmd:h-[24px]*/}
+                            <QuestionSvg className="ml-[4px]"/>
+                        </Tooltip>
                     </div>
                     <div className="text-[40px] text-textPrimary">
-                        71 :59: 59
+                        24 :59: 59
                     </div>
                 </div>
                 <>

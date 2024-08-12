@@ -10,8 +10,8 @@ const CardOne =()=> {
                         <GlobalRankSvg/>
                     </div>
                     Global Rank
-                    <Tooltip content="Global Rank is a counter which is increased by 1 whenever new account registers to use TAPTAP and a Crypto Rank (cRank) claim is made. It is part of TAPTAP Mint Reward calculation, which is dependent on Log2 function of current Global Rank minus cRank claimed by a user" position="left">
-                        <QuestionSvg className="ml-[4px] w-[16px] h-[16px]"/>
+                    <Tooltip content="Global Rank is a counter which is increased by 1 whenever new account registers to use TAPTAP and a Crypto Rank (cRank) claim is made. It is part of TAPTAP Mint Reward calculation, which is dependent on Log2 function of current Global Rank minus cRank claimed by a user" position="bottom">
+                        <QuestionSvg className="ml-[4px]"/>
                     </Tooltip>
                 </div>
                 <div className="text-textPrimary">11111</div>

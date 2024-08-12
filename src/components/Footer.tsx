@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+
 const Footer = () => {
     return (
         <footer
@@ -18,7 +19,7 @@ const Footer = () => {
                         TAPTAP
                     </div>
                 </div>
-                <div className="text-textPrimary text-[14px] font-montserrat font-[500] mmd:font-[400] leading-[18px]">
+                <div className="text-textPrimary text-[14px] font-spartan font-[500] mmd:font-[400] leading-[18px]">
                     © 2024 TAPTAP.meme
                 </div>
             </div>

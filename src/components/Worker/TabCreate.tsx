@@ -1,11 +1,31 @@
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import IconButton from "@/components/Common/Button/IconButton";
 import WorkerSvg from "@/components/Svg/WorkerSvg";
 import MoreSvg from "@/components/Svg/MoreSvg";
 import PaperSvg from "@/components/Svg/PaperSvg";
 import QuestionSvg from "@/components/Svg/QuestionSvg";
+import DropdownMenu from "@/components/DropdownMenu";
+import Tooltip from "@/components/Common/Tooltip";
 
 const TabCreate = () => {
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const dropdownRef = useRef<HTMLDivElement>(null);
+
+    const toggleDropdown = () => {
+        setIsDropdownOpen(!isDropdownOpen);
+    };
+    const handleClickOutside = (event: MouseEvent) => {
+        if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+            setIsDropdownOpen(false);
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
     return (
         <div className="w-full mx-auto max-w-[800px] min-w-[343px] rounded-[32px] bg-backgroundGray backdrop-blur-[16px] font-montserrat
              p-[20px] mmd:p-[32px]
@@ -22,8 +42,13 @@ const TabCreate = () => {
                     {/*<WorkerSvg className="mr-[8px] w-[16px] h-[16px] mmd:w-[24px] mmd:h-[24px]"/>*/}
                     Worker
                 </div>
-                <div>
-                    <MoreSvg className="w-[16px] h-[16px] mmd:w-[24px] mmd:h-[24px]"/>
+                <div className="relative" ref={dropdownRef}>
+                    <div onClick={toggleDropdown} className="cursor-pointer">
+                        <MoreSvg className="w-[24px] h-[24px]"/>
+                    </div>
+                    {isDropdownOpen && (
+                        <DropdownMenu onClose={() => setIsDropdownOpen(false)}/>
+                    )}
                 </div>
             </div>
             <div className="flex justify-between items-center mb-[16px] mmd:mb-[20px]">
@@ -55,14 +80,22 @@ const TabCreate = () => {
             <div className="flex justify-between items-center mb-[16px] mmd:mb-[20px]">
                 <div className="flex items-center">
                     Fair mint ends in
-                    <QuestionSvg className="ml-[4px]"/>
+                    <Tooltip
+                        content="TapTap fair mint starts with a timer that counts down from 72 hours. Each fair mint resets the timer. When the timer reaches zero, the fair mint ends."
+                        position="bottom">
+                        <QuestionSvg className="ml-[4px]"/>
+                    </Tooltip>
                 </div>
                 <div className="text-textPrimary">111</div>
             </div>
             <div className="flex justify-between items-center mb-[16px] mmd:mb-[20px]">
                 <div className="flex items-center">
                     Fair mint Fee
-                    <QuestionSvg className="ml-[4px]"/>
+                    <Tooltip
+                        content="The fee to participate in the fair mint is used as follows: 90% for TAPTAP buyback and 10% for Vault rewards."
+                        position="bottom">
+                        <QuestionSvg className="ml-[4px]"/>
+                    </Tooltip>
                 </div>
                 <div className="text-textPrimary">
                     111

@@ -4,7 +4,7 @@ const config: {
   plugins: any[];
   theme: {
     extend: {
-      fontFamily: { coveredByYourGrace: string[]; montserrat: string[]; hanalei: string[] };
+      fontFamily: { spartan: string[]; coveredByYourGrace: string[]; montserrat: string[]; hanalei: string[] };
       screens: { mmd: string };
       backgroundImage: { "gradient-conic": string; "gradient-radial": string };
       colors: {
@@ -40,6 +40,7 @@ const config: {
         hanalei: ['"Hanalei Fill"', 'cursive'],
         montserrat: ['"Montserrat Variable"', 'sans-serif'],
         coveredByYourGrace: ['"Covered By Your Grace"', 'cursive'],
+        spartan: ['"League Spartan Variable"'],
       },
       colors: {
         primary: '#E91898',

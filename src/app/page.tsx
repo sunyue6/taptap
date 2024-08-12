@@ -48,7 +48,7 @@ export default function Home() {
               <Navbar onItemClick={handleItemClick}/>
           </div>
           {/*className="z-10   mt-[90px]"*/}
-          <div className="z-10 container max-w-[1232px] min-w-[375px] mx-auto flex-grow px-[16px]  mt-[90px]">
+          <div className="z-10 container max-w-[1232px] min-w-[375px] mx-auto flex-grow px-[16px] mt-[76px]  mmd:mt-[90px]">
               <TitlePage value={titleValue}/>
               {renderContent()}
               {/*TODO 展示 NoData组件逻辑*/}
