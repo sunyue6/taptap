@@ -54,7 +54,7 @@ const FairMintTapTap = () => {
                         type="number"
                         min="1"
                         max="100"
-                        className="outline-none border border-textSecondary rounded-[8px] max-w-[148px] min-w-[100px] p-[12px] bg-transparent"/>
+                        className="outline-none border border-textSecondary rounded-[8px] w-[100px] mmd:w-[148px] p-[12px] bg-transparent"/>
                 </div>
                 <div className="flex justify-between items-center mb-[20px]">
                     <div>Global Rank</div>

@@ -67,23 +67,23 @@ const MintDetail = () => {
                 </div>
                 <div className="flex justify-between items-center mb-[20px]">
                     <div>cRank</div>
-                    <div className="text-textPrimary">111</div>
+                    <div className="text-textPrimary">6,522,912</div>
                 </div>
                 <div className="flex justify-between items-center mb-[20px]">
                     <div>AMP</div>
-                    <div className="text-textPrimary">111</div>
+                    <div className="text-textPrimary">19,921</div>
                 </div>
                 <div className="flex justify-between items-center mb-[20px]">
                     <div>EAA</div>
-                    <div className="text-textPrimary">111</div>
+                    <div className="text-textPrimary">0%</div>
                 </div>
                 <div className="flex justify-between items-center mb-[20px]">
                     <div>Term,days</div>
-                    <div className="text-textPrimary">111</div>
+                    <div className="text-textPrimary">1</div>
                 </div>
                 <div className="flex justify-between items-center mb-[20px]">
                     <div>Estimated TAPTAP</div>
-                    <div className="text-textPrimary">111</div>
+                    <div className="text-textPrimary">4,722</div>
                 </div>
                 <div className="flex justify-between items-center mb-[32px]">
                     <div className="w-full mr-[80px]">

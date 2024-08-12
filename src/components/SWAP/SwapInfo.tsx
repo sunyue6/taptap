@@ -14,7 +14,7 @@ import BaseButton from "@/components/Common/Button/BaseButton";
 const SwapInfo = () => {
     return (
         <div
-            className="z-10 mx-auto w-full font-montserrat h-[444px] rounded-[32px] bg-[rgba(240,255,230,0.1)] backdrop-blur-[16px] p-[16px] text-[16px] leading-[18px] font-[600] text-textSecondary">
+            className="relative mx-auto w-full font-montserrat h-[444px] rounded-[32px] bg-[rgba(240,255,230,0.1)] backdrop-blur-[16px] p-[16px] text-[16px] leading-[18px] font-[600] text-textSecondary">
             <div className="flex justify-start items-center text-[20px] font-[700] mb-[16px] text-textPrimary">
                 <div
                     className="w-[24px] h-[24px] rounded-full bg-[rgba(255,255,255,0.20)] flex justify-center items-center mr-[8px]">
@@ -23,10 +23,9 @@ const SwapInfo = () => {
                 Swap
             </div>
             <div
-                className="rounded-[16px] bg-[rgba(240,255,230,0.1)] backdrop-blur-[16px] p-[16px] font-[500] text-[12px] mb-[4px] relative">
+                className="rounded-[16px] bg-[rgba(240,255,230,0.1)] backdrop-blur-[16px] p-[16px] font-[500] text-[12px] mb-[4px]">
                 <div className="mb-[4px]">Sell</div>
                 <div className="flex justify-between items-center mb-[6px]">
-                    {/*<div className="text-[32px] font-[600]">122312</div>*/}
                     <input
                         className="w-[186px] rounded-[8px] bg-transparent outline-none placeholder:text-textPrimary text-[32px] font-[600] text-textPrimary"
                         placeholder="122312"
@@ -40,7 +39,7 @@ const SwapInfo = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center text-textSecondary">
                     <div>
                         $267,536.17
                     </div>
@@ -48,9 +47,8 @@ const SwapInfo = () => {
                         Balance:1.234 <span className="text-success text-[14px] ml-[8px]">MAX</span>
                     </div>
                 </div>
-                <DownArrowSvg className="absolute left-1/2 transform -translate-x-1/2"/>
-
             </div>
+            <DownArrowSvg className="absolute left-1/2 transform -translate-x-1/2 top-[165px] z-10"/>
             <div
                 className="rounded-[16px] bg-[rgba(240,255,230,0.1)] backdrop-blur-[16px] p-[16px] font-[500] text-[12px]">
                 <div className="mb-[4px]">Sell</div>
@@ -67,6 +65,7 @@ const SwapInfo = () => {
                 <div className="flex justify-between items-center">
                     <div>
                         $267,536.17
+                        <span className="ml-[10px]">(-0.02%)</span>
                     </div>
                     <div>
                         Balance:1.234

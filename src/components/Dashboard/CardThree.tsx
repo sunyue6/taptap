@@ -5,7 +5,7 @@ const CardThree =()=> {
         <div className="z-10 max-w-[800px] min-w-[343px] w-full rounded-[16px] bg-[rgba(240,255,230,0.1)] backdrop-blur-[16px] p-5 text-[16px] leading-[18px] font-[600] text-textSecondary">
             <div className="flex justify-between  items-center">
                 <div>Max Term,days</div>
-                <div className="text-textPrimary">11111</div>
+                <div className="text-textPrimary">466</div>
             </div>
             <div  className="flex justify-between items-center py-[16px]">
                 <div  className="flex items-center">AMP
@@ -13,7 +13,7 @@ const CardThree =()=> {
                         <QuestionSvg className="ml-[4px]"/>
                     </Tooltip>
                 </div>
-                <div className="text-textPrimary">11111</div>
+                <div className="text-textPrimary">2,912</div>
             </div>
             <div  className="flex justify-between  items-center">
                 <div  className="flex items-center">EAA
@@ -22,7 +22,7 @@ const CardThree =()=> {
                     </Tooltip>
 
                 </div>
-                <div className="text-textPrimary">11111</div>
+                <div className="text-textPrimary">0%</div>
             </div>
         </div>
     )

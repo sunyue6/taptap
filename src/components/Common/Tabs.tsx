@@ -10,7 +10,7 @@ interface TabsProps {
     borderClass?: string; // Optional prop to customize the border class
 }
 
-const Tabs: React.FC<TabsProps> = ({ tabs,borderClass = 'border-b-2' }) => {
+const Tabs: React.FC<TabsProps> = ({ tabs,borderClass = 'border-b-[1px]' }) => {
     const [activeTab, setActiveTab] = useState(0);
 
     return (

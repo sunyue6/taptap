@@ -14,15 +14,15 @@ const CardOne =()=> {
                         <QuestionSvg className="ml-[4px]"/>
                     </Tooltip>
                 </div>
-                <div className="text-textPrimary">11111</div>
+                <div className="text-textPrimary">2,822,372</div>
             </div>
             <div className="flex justify-between items-center pb-[16px]">
                 <div>Active Minters</div>
-                <div className="text-textPrimary">11111</div>
+                <div className="text-textPrimary">6,522,912</div>
             </div>
             <div  className="flex justify-between items-center">
                 <div>Time Since Genesis</div>
-                <div className="text-textPrimary">11111</div>
+                <div className="text-textPrimary">2 years</div>
             </div>
         </div>
     )

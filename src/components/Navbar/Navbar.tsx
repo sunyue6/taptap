@@ -59,9 +59,12 @@ const Navbar: React.FC<NavbarProps> = ({ onItemClick }) => {
                             ))}
                         </ul>
                         <div>
-                            {/* TODO 连接钱包地址 逻辑 */}
-                            {/*<BaseButton text="WALLET CONNECT"/>*/}
-                            <WalletAd/>
+                           <div className="block mmd:hidden">
+                               <BaseButton text="WALLET CONNECT"/>
+                           </div>
+                            <div className="hidden mmd:block">
+                                <WalletAd/>
+                            </div>
                         </div>
                         <div className="mmd:hidden flex items-center ml-[12px] mmd:ml-0">
                             {menuOpen ? (
