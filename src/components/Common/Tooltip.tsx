@@ -7,10 +7,10 @@ interface TooltipProps {
     position?: 'top' | 'right' | 'bottom' | 'left';
 }
 
-const Tooltip: React.FC<TooltipProps> = ({ children, content, position = 'top' }) => {
+const Tooltip: React.FC<TooltipProps> = ({ children, content, position = 'bottom' }) => {
     return (
         <div className="relative group inline-block font-[400]">
-            <div className="absolute hidden group-hover:block group-focus:block">
+            <div className="absolute hidden group-hover:block group-focus:block  z-10">
                 <div
                     className={`absolute bg-[#0C101B] text-[#FFF] text-xs rounded-[12px] py-[12px] px-[12px] whitespace-normal ${getTooltipPositionClasses(position)} flex items-center justify-center`}
                     style={{ width: '311px', lineHeight: '18px', fontSize: '12px' }}
@@ -30,7 +30,8 @@ const getTooltipPositionClasses = (position: 'top' | 'right' | 'bottom' | 'left'
         case 'right':
             return 'top-1/2 left-full transform -translate-y-1/2';
         case 'bottom':
-            return 'top-full left-[15px] top-[15px]';
+            return 'bottom-0';
+            // return 'top-full left-[15px] -[15px]';
         case 'left':
             return 'top-1/2 left-[-100%] transform -translate-y-1/2';
         default:

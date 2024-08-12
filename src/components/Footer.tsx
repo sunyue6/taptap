@@ -2,12 +2,11 @@ import Image from "next/image";
 
 const Footer = () => {
     return (
-
         <footer
-            className="z-10 w-full bg-backgroundSecondary py-[24px] rounded-t-[20px] px-[16px]
+            className="z-50 fixed bottom-0 w-full bg-backgroundSecondary py-[24px] rounded-t-[20px] px-[16px]
                                                                mmd:rounded-t-[40px]">
             <div className="mx-auto flex flex-col
-                                    mmd:flex-row items-center justify-between max-w-[1200px]">
+                                    mmd:flex-row items-center justify-between max-w-[1200px] h-[60px]">
                 <div className="flex items-center mb-[12px]
                                                   mmd:mb-0">
                     <Image src="/logo_img.png" alt="Logo" width={44} height={37.29}
@@ -18,7 +17,7 @@ const Footer = () => {
                         TAPTAP
                     </div>
                 </div>
-                <div className="text-textPrimary text-[14px] font-montserrat">
+                <div className="text-textPrimary text-[14px] font-montserrat font-[500] mmd:font-[400] leading-[18px]">
                     © 2024 TAPTAP.meme
                 </div>
             </div>

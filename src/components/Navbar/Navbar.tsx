@@ -25,6 +25,7 @@ const Navbar: React.FC<NavbarProps> = ({ onItemClick }) => {
     const handleItemClick = (item: string) => {
         setActiveItem(item);
         onItemClick(item);
+        setMenuOpen(false);
     };
 
     const navItems = [
@@ -39,8 +40,8 @@ const Navbar: React.FC<NavbarProps> = ({ onItemClick }) => {
     return (
         <nav className="z-50 fixed top-[16px] left-0 w-full text-textPrimary font-hanalei px-[16px]">
             <div
-                className={`max-w-[1200px] min-w-[343px] bg-backgroundPrimary backdrop-blur-[32px]  shadow-lg ${menuOpen ? 'rounded-[30px]' : 'rounded-[60px]' }  min-h-[74px] mx-auto px-[16px] mmd:px-[24px]`}>
-                <div className="flex items-center justify-between w-full h-[74px]">
+                className={`max-w-[1200px] min-w-[343px] bg-backgroundPrimary backdrop-blur-[32px]  shadow-lg ${menuOpen ? 'rounded-[30px]' : 'rounded-[60px]' }   mx-auto px-[16px] mmd:px-[24px]`}>
+                <div className="flex items-center justify-between w-full h-[60px] mmd:h-[74px]">
                     <div className="flex items-center cursor-pointer">
                         <Image src="/logo_img.png" alt="Logo" width={44} height={37.29} className="mr-[12px]"/>
                         <div className="text-textPrimary hidden mmd:block text-[30px]">TAPTAP</div>
@@ -81,7 +82,7 @@ const Navbar: React.FC<NavbarProps> = ({ onItemClick }) => {
                             <li
                                 key={item.value}
                                 onClick={() => handleItemClick(item.value)}
-                                className={`flex items-center justify-between cursor-pointer py-1.5 px-5 ${activeItem === item.value ? 'text-primary' : 'text-white'} hover:text-primaryHover ${index === navItems.length - 1 ? 'mb-[48px]' : 'mb-[20px]'}`}>
+                                className={`flex items-center justify-between cursor-pointer py-1.5 px-5 ${activeItem === item.value ? 'text-primary' : 'text-white'} hover:text-primaryHover ${index === navItems.length - 1 ? 'mb-0' : 'mb-[20px]'}`}>
                                 <div
                                     className="text-[24px]"
                                 >{item.label}</div>

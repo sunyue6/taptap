@@ -11,6 +11,7 @@ import NoData from "@/components/NoData";
 import Mint from "@/components/Mint/Mint";
 import Swap from "@/components/SWAP/Swap";
 import Worker from "@/components/Worker/Worker";
+import Tooltip from "@/components/Common/Tooltip";
 export default function Home() {
   const [titleValue, setTitleValue] = useState('DASHBOARD');
 
@@ -37,21 +38,23 @@ export default function Home() {
       // 屏幕的宽度，布局，
       <div className="min-h-screen flex flex-col relative"
            style={{
-             background: `linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), url('/bg_img.png')`,
-             backgroundSize: 'cover',
-             backgroundPosition: 'top center',
+               background: `linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), url('/bg_img.png')`,
+               backgroundSize: 'cover',
+               backgroundPosition: 'top center',
            }}
       >
           <OverlayBackground/>
           <div>
               <Navbar onItemClick={handleItemClick}/>
           </div>
-          <div className="z-10 container max-w-[1232px] min-w-[375px] mx-auto flex-grow px-[16px] mt-[90px]">
+          {/*className="z-10   mt-[90px]"*/}
+          <div className="z-10 container max-w-[1232px] min-w-[375px] mx-auto flex-grow px-[16px]  mt-[90px]">
               <TitlePage value={titleValue}/>
               {renderContent()}
               {/*TODO 展示 NoData组件逻辑*/}
               {/*<NoData/>*/}
           </div>
+          <div className="h-auto mmd:h-[108px] mt-0 mmd:mt-[120px]"></div>
           <PositionIcon/>
           <Footer/>
       </div>

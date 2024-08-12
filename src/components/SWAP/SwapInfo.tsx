@@ -26,11 +26,16 @@ const SwapInfo = () => {
                 className="rounded-[16px] bg-[rgba(240,255,230,0.1)] backdrop-blur-[16px] p-[16px] font-[500] text-[12px] mb-[4px] relative">
                 <div className="mb-[4px]">Sell</div>
                 <div className="flex justify-between items-center mb-[6px]">
-                    <div className="text-[32px] font-[600]">122312</div>
+                    {/*<div className="text-[32px] font-[600]">122312</div>*/}
+                    <input
+                        className="w-[186px] rounded-[8px] bg-transparent outline-none placeholder:text-textPrimary text-[32px] font-[600] text-textPrimary"
+                        placeholder="122312"
+                    />
                     <div>
                         <div
                             className="bg-backgroundPrimary rounded-full flex items-center justify-center h-[40px] leading-[40px] pl-[8px] pr-[12px] text-[20px]">
-                            <Image src="/logo_circle.png" alt="Logo" width={24} height={24} className="mr-[4px] w-[24px] h-[24px]"/>
+                            <Image src="/logo_circle.png" alt="Logo" width={24} height={24}
+                                   className="mr-[4px] w-[24px] h-[24px]"/>
                             TAP
                         </div>
                     </div>
@@ -53,7 +58,7 @@ const SwapInfo = () => {
                     <div className="text-[32px] font-[600]">0</div>
                     <div>
                         <div
-                            className="bg-backgroundPrimary rounded-full flex items-center justify-center h-[40px] leading-[40px] pl-[8px] pr-[12px]">
+                            className="bg-backgroundPrimary rounded-full flex items-center justify-center h-[40px] leading-[40px] pl-[8px] pr-[12px] text-[20px]">
                             <Image src="/eth_img.png" alt="Logo" width={24} height={24} className="mr-[4px]"/>
                             ETH
                         </div>
@@ -73,7 +78,9 @@ const SwapInfo = () => {
             <div className="flex justify-between items-center text-[12px] mb-[16px]">
                 <div>
                     1 TAP = 0.00000006312 ETH
-                    ($1.00)
+                   <span className="text-backgroundThird ml-[10px]">
+                        ($1.00)
+                   </span>
                 </div>
                 <div className="flex items-center">
                     <GasStationSvg className="mr-[4px]"/>

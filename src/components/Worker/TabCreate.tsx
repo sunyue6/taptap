@@ -2,6 +2,8 @@ import React from 'react';
 import IconButton from "@/components/Common/Button/IconButton";
 import WorkerSvg from "@/components/Svg/WorkerSvg";
 import MoreSvg from "@/components/Svg/MoreSvg";
+import PaperSvg from "@/components/Svg/PaperSvg";
+import QuestionSvg from "@/components/Svg/QuestionSvg";
 
 const TabCreate = () => {
     return (
@@ -13,7 +15,12 @@ const TabCreate = () => {
                 text-[20px] leading-[18px] text-textPrimary
             ">
                 <div className="flex items-center h-auto leading-auto mmd:h-[24px] mmd:leading-[24px]">
-                    <WorkerSvg className="mr-[8px] w-[16px] h-[16px] mmd:w-[24px] mmd:h-[24px]"/>Worker
+                    <div
+                        className="w-[24px] h-[24px] rounded-full bg-[rgba(255,255,255,0.20)] flex justify-center items-center mr-[8px]">
+                        <WorkerSvg/>
+                    </div>
+                    {/*<WorkerSvg className="mr-[8px] w-[16px] h-[16px] mmd:w-[24px] mmd:h-[24px]"/>*/}
+                    Worker
                 </div>
                 <div>
                     <MoreSvg className="w-[16px] h-[16px] mmd:w-[24px] mmd:h-[24px]"/>
@@ -46,14 +53,25 @@ const TabCreate = () => {
                 <div className="text-textPrimary">111</div>
             </div>
             <div className="flex justify-between items-center mb-[16px] mmd:mb-[20px]">
-                <div>
+                <div className="flex items-center">
                     Fair mint ends in
+                    <QuestionSvg className="ml-[4px]"/>
                 </div>
                 <div className="text-textPrimary">111</div>
             </div>
             <div className="flex justify-between items-center mb-[16px] mmd:mb-[20px]">
-                <div>
+                <div className="flex items-center">
                     Fair mint Fee
+                    <QuestionSvg className="ml-[4px]"/>
+                </div>
+                <div className="text-textPrimary">
+                    111
+                </div>
+            </div>
+            <div className="h-[1px]  max-w-[736px] min-w-[303px] bg-backgroundThird mt-[32px] mb-[32px]"></div>
+            <div className="flex justify-between items-center mb-[16px] mmd:mb-[20px]">
+                <div>
+                    Number of workers
                 </div>
                 <div>
                     <input
@@ -64,13 +82,6 @@ const TabCreate = () => {
                         className=" outline-none
                         border border-textSecondary rounded-[8px] h-[42px] p-[12px] bg-transparent w-[100px] mmd:w-[148px]"/>
                 </div>
-            </div>
-            <div className="h-[1px]  max-w-[736px] min-w-[303px] bg-backgroundThird mt-[32px] mb-[32px]"></div>
-            <div className="flex justify-between items-center mb-[16px] mmd:mb-[20px]">
-                <div>
-                    Number of workers
-                </div>
-                <div className="text-textPrimary">111</div>
             </div>
             <div className="flex justify-between items-center mb-[16px] mmd:mb-[20px]">
                 <div>

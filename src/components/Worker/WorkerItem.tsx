@@ -7,6 +7,7 @@ import Image from "next/image";
 import ProgressBar from "@/components/Common/ProgressBar";
 import IconButton from "@/components/Common/Button/IconButton";
 import TextButton from "@/components/Common/Button/TextButton";
+import MiningSvg from "@/components/Svg/MiningSvg";
 const WorkerItem = () => {
     const [isUpSvg, setIsUpSvg] = useState(true);
 
@@ -44,15 +45,21 @@ const WorkerItem = () => {
                 text-[20px] leading-[18px] text-textPrimary
             ">
                 <div className="flex items-center h-auto leading-auto mmd:h-[24px] mmd:leading-[24px]">
-                    <WorkerSvg className="mr-[8px] w-[16px] h-[16px] mmd:w-[24px] mmd:h-[24px]"/>Worker #0004
+                    <div
+                        className="w-[24px] h-[24px] rounded-full bg-[rgba(255,255,255,0.20)] flex justify-center items-center mr-[8px]">
+                        <MiningSvg/>
+                    </div>
+                    {/*<MiningSvg className="mr-[8px] w-[16px] h-[16px] mmd:w-[24px] mmd:h-[24px]"/>*/}
+                    Worker #0004
                 </div>
                 <div onClick={handleToggle} className="cursor-pointer">
-                    {isUpSvg ? <UpSvg className="w-[16px] h-[16px] mmd:w-[24px] mmd:h-[24px]"/> : <DownSvg className="w-[16px] h-[16px] mmd:w-[24px] mmd:h-[24px]"/>}
+                    {isUpSvg ? <UpSvg className="w-[16px] h-[16px] mmd:w-[24px] mmd:h-[24px]"/> :
+                        <DownSvg className="w-[16px] h-[16px] mmd:w-[24px] mmd:h-[24px]"/>}
                 </div>
             </div>
             {
                 isUpSvg && (
-                    <div className="mt-[32px]">
+                    <div className="mt-[32px] font-[600]">
                         <TapTable headers={headers} rows={rows}/>
                         <div className="h-[1px]  max-w-[736px] min-w-[303px] bg-backgroundThird mt-[32px] mb-[32px]"></div>
                         <div className="flex justify-between items-center mb-[16px] mmd:mb-[20px]">

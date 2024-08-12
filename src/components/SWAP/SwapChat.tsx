@@ -37,7 +37,7 @@ const SwapChat = () => {
     };
 
     return (
-        <div className="z-10 mx-auto font-montserrat w-full min-w-[343px] mmd:min-w-[556px]  rounded-[16px] bg-backgroundSecondary backdrop-blur-[16px] p-[16px] mmd:p-[32px] text-[16px] leading-[18px] font-[600] text-textSecondary">
+        <div className="z-10 mx-auto font-montserrat w-full min-w-[343px] mmd:min-w-[556px]  rounded-[32px] bg-backgroundSecondary backdrop-blur-[16px] p-[16px] mmd:p-[32px] text-[16px] leading-[18px] font-[600] text-textSecondary">
             <div className="flex justify-between mb-[15px]">
                 <div className="flex items-center text-[24px]">
                     <Image src="/logo_circle.png" alt="Logo" width={35} height={35} className="mr-[8px] w-[35px] h-[35px]" />
@@ -82,8 +82,11 @@ const SwapChat = () => {
                 </div>
             </div>
             {
-                isDown && (<div>
-                    <KLineChart data={data}/>
+                isDown && (<div className="h-[255px]">
+                    {/*<KLineChart data={data}/>*/}
+                    <iframe height="100%" width="100%" id="geckoterminal-embed" title="GeckoTerminal Embed"
+                            src="https://www.geckoterminal.com/taiko/pools/0x29263dcedbc27644ccfc51819c6c4bed127859c9?embed=1&info=0&swaps=0"
+                            frameBorder="0" allow="clipboard-write" allowFullScreen></iframe>
                 </div>)
             }
         </div>
