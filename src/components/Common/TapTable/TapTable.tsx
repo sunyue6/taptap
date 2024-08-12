@@ -7,10 +7,10 @@ interface TableProps {
 
 const TapTable: React.FC<TableProps> = ({ headers = [], rows }) => {
     return (
-        <div className="w-full mx-auto font-[500] text-[16px]">
+        <div className="w-full mx-auto font-[500] text-[16px] text-textPrimary">
             {/* Table Header */}
             {headers.length > 0 && (
-                <div className="flex justify-between pb-[16px] mmd:pb-[20px] ">
+                <div className="flex justify-between pb-[16px] mmd:pb-[20px] text-textSecondary">
                     {headers.map((header, index) => (
                         <div key={index} className={`flex-1 ${index === 0 ? 'text-left' : index === headers.length - 1 ? 'text-right' : 'text-center'}`}>
                             {header}
