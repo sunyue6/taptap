@@ -23,7 +23,7 @@ const Tooltip: React.FC<TooltipProps> = ({ children, content, position = 'bottom
     );
 };
 
-const getTooltipPositionClasses = (position: 'top' | 'right' | 'bottom' | 'left', leftClass:'left-[-145px]' ) => {
+const getTooltipPositionClasses = (position: 'top' | 'right' | 'bottom' | 'left', leftClass: string ) => {
     switch (position) {
         case 'top':
             return 'top-[-40px] left-1/2 transform -translate-x-1/2';
