@@ -58,7 +58,7 @@ const MintDetail = () => {
                     </div>
                     <div className="relative" ref={dropdownRef}>
                         <div onClick={toggleDropdown} className="cursor-pointer">
-                            <MoreSvg className="w-[16px] h-[16px] mmd:w-[24px] mmd:h-[24px]"/>
+                            <MoreSvg className="w-[24px] h-[24px]"/>
                         </div>
                         {isDropdownOpen && (
                             <DropdownMenu onClose={() => setIsDropdownOpen(false)}/>
