@@ -47,11 +47,12 @@ export default function Home() {
                backgroundPosition: 'top center',
            }}
       >
-          <OverlayBackground/>
+          <div className="pointer-events-none">
+              <OverlayBackground/>
+          </div>
           <div>
               <Navbar onItemClick={handleItemClick}/>
           </div>
-          {/*className="z-10   mt-[90px]"*/}
           <div className="z-10 container max-w-[1232px] min-w-[375px] mx-auto flex-grow px-[16px] mt-[76px]  mmd:mt-[90px]">
               <TitlePage value={titleValue}/>
               {renderContent()}
