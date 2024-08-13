@@ -6,6 +6,10 @@ import ChevronRightSvg from "@/components/Svg/ChevronRightSvg";
 import BaseButton from "@/components/Common/Button/BaseButton";
 import WalletAd from "@/components/Navbar/WalletAd";
 import React, { useState } from 'react';
+import CloseSvg from "@/components/Svg/CloseSvg";
+import CloseSelectedSvg from "@/components/Svg/CloseSelectedSvg";
+import TelegramSvg from "@/components/Svg/TelegramSvg";
+import TelegramSelectedSvg from "@/components/Svg/TelegramSelectedSvg";
 interface NavbarProps {
     onItemClick: (item: string) => void;
 }
@@ -40,7 +44,7 @@ const Navbar: React.FC<NavbarProps> = ({ onItemClick }) => {
     return (
         <nav className="z-50 fixed top-[16px] left-0 w-full text-textPrimary font-hanalei px-[16px]">
             <div
-                className={`max-w-[1200px] min-w-[343px] bg-backgroundPrimary backdrop-blur-[32px]  shadow-lg ${menuOpen ? 'rounded-[30px]' : 'rounded-[60px]' }   mx-auto px-[16px] mmd:px-[24px]`}>
+                className={`max-w-[1200px] min-w-[343px] bg-backgroundPrimary backdrop-blur-[32px]  shadow-lg ${menuOpen ? 'rounded-[30px]' : 'rounded-[60px]' }   mx-auto px-[16px] mmd:px-[24px] relative`}>
                 <div className="flex items-center justify-between w-full h-[60px] mmd:h-[74px]">
                     <div className="flex items-center cursor-pointer">
                         <Image src="/logo_img.png" alt="Logo" width={44} height={37.29} className="mr-[12px] mt-[15px]"/>
@@ -94,7 +98,18 @@ const Navbar: React.FC<NavbarProps> = ({ onItemClick }) => {
                         ))}
                     </ul>
                 </div>
-
+                <div className="absolute top-[341px] right-0 hidden mmd:block">
+                    <div className="flex flex-col">
+                        <div className="group relative mr-0 mb-[20px]">
+                            <CloseSvg className="block"/>
+                            <CloseSelectedSvg className="hidden group-hover:block absolute inset-0"/>
+                        </div>
+                        <div className="group relative">
+                            <TelegramSvg className="block"/>
+                            <TelegramSelectedSvg className="hidden group-hover:block absolute inset-0"/>
+                        </div>
+                    </div>
+                </div>
             </div>
         </nav>
     );
