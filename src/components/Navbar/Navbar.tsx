@@ -18,6 +18,7 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ onItemClick }) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [activeItem, setActiveItem] = useState<string>('DASHBOARD');
+    const [isWalletConnected, setIsWalletConnected] = useState(false); // 新状态
 
     const handleToggleMenu = () => {
         setMenuOpen(prevState => !prevState);
@@ -30,6 +31,10 @@ const Navbar: React.FC<NavbarProps> = ({ onItemClick }) => {
         setActiveItem(item);
         onItemClick(item);
         setMenuOpen(false);
+    };
+
+    const handleWalletConnectClick = () => {
+        setIsWalletConnected(prevState => !prevState); // 切换状态
     };
 
     const navItems = [
@@ -63,12 +68,11 @@ const Navbar: React.FC<NavbarProps> = ({ onItemClick }) => {
                             ))}
                         </ul>
                         <div>
-                           <div className="block mmd:hidden">
-                               <BaseButton text="WALLET CONNECT"/>
-                           </div>
-                            <div className="hidden mmd:block">
-                                <WalletAd/>
-                            </div>
+                            {isWalletConnected ? (
+                                <WalletAd/> // 当连接时显示 WalletAd
+                            ) : (
+                                <BaseButton text="WALLET CONNECT" onClick={handleWalletConnectClick}/>
+                            )}
                         </div>
                         <div className="mmd:hidden flex items-center ml-[12px] mmd:ml-0">
                             {menuOpen ? (
