@@ -28,7 +28,7 @@ const SwapInfo = () => {
                 <div className="flex justify-between items-center mb-[6px]">
                     <input
                         className="w-[186px] rounded-[8px] bg-transparent outline-none placeholder:text-textPrimary text-[32px] font-[600] text-textPrimary"
-                        placeholder="122312"
+                        defaultValue="122312"
                     />
                     <div>
                         <div
