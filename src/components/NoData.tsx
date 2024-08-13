@@ -1,7 +1,7 @@
 import Image from 'next/image';
 const NoData = () => {
     return (
-        <div className="z-10 mx-auto font-montserrat w-full">
+        <div className=" mx-auto font-montserrat w-full">
             <div
                 className="max-w-[800px] min-w-[343px] w-full rounded-[32px] bg-backgroundGray backdrop-blur-[16px] mx-auto py-[40px]">
                 <div className="flex justify-center mb-[20px]">

@@ -13,7 +13,7 @@ import UpArrowSvg from "@/components/Svg/UpArrowSvg";
 
 const SwapChat = () => {
     const textToCopy = "0xbea...b8a3";
-    const [copied, setCopied] = useState(false);
+    const [copied, setCopied] = useState(true);
 
     const [isDown, setIsDown] = useState(true);
 
@@ -37,7 +37,7 @@ const SwapChat = () => {
     };
 
     return (
-        <div className="z-10 mx-auto font-montserrat w-full min-w-[343px] mmd:min-w-[556px]  rounded-[32px] bg-backgroundSecondary backdrop-blur-[16px] p-[16px] mmd:p-[32px] text-[16px] leading-[18px] font-[600] text-textSecondary">
+        <div className=" mx-auto font-montserrat w-full min-w-[343px] mmd:min-w-[556px]  rounded-[32px] bg-backgroundSecondary backdrop-blur-[16px] p-[16px] mmd:p-[32px] text-[16px] leading-[18px] font-[600] text-textSecondary">
             <div className="flex justify-between mb-[15px]">
                 <div className="flex items-center text-[24px]">
                     <Image src="/logo_circle.png" alt="Logo" width={35} height={35} className="mr-[8px] w-[35px] h-[35px]" />

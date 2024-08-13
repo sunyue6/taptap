@@ -94,6 +94,7 @@ const Navbar: React.FC<NavbarProps> = ({ onItemClick }) => {
                         ))}
                     </ul>
                 </div>
+
             </div>
         </nav>
     );

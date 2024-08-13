@@ -5,7 +5,7 @@ import Tooltip from "@/components/Common/Tooltip";
 
 const Dashboard = () => {
     return (
-        <div className="z-10 mx-auto font-montserrat w-full">
+        <div className=" mx-auto font-montserrat w-full">
             <CardOne/>
             <div className='flex mmd:flex-row flex-col  max-w-[800px] mx-auto mt-[12px] mmd:mt-[16px] gap-[12px] mmd:gap-[16px]'>
                 <CardTwo/>
