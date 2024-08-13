@@ -40,7 +40,7 @@ const Jackpot = () => {
             </div>), cRank: (
                 <div className="text-success text-[16px] mmd:text-[24px]">#315,739,255</div>
             ), Reward: (<div className="text-success flex justify-end items-center text-[16px] mmd:text-[32px]">4,722
-                <EthLogoSvg className="w-[14px] h-[22px] ml-[4px] mmd:ml-[8px]"/>
+                <EthLogoSvg className="w-[10px] h-[16px] mmd:w-[14px] mmd:h-[22px] ml-[4px] mmd:ml-[8px]"/>
             </div>)
         },
         {Worker: (<div
