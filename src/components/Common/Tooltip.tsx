@@ -11,7 +11,7 @@ interface TooltipProps {
 const Tooltip: React.FC<TooltipProps> = ({ children, content, position = 'bottom', leftClass = 'left-[-145px]'}) => {
     return (
         <div className="relative group inline-block font-[400]">
-            <div className="absolute hidden group-hover:block group-focus:block  z-10">
+            <div className="absolute hidden group-hover:block group-focus:block z-[9]">
                 <div
                     className={`absolute bg-[#0C101B] text-[#FFF] text-xs rounded-[12px] text-[12px] leading-[18px] w-[311px] py-[12px] px-[12px] whitespace-normal ${getTooltipPositionClasses(position, leftClass)} flex items-center justify-center`}
                 >
