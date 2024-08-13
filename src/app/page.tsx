@@ -27,7 +27,7 @@ export default function Home() {
             case 'DASHBOARD':
                 return <Dashboard/>;
             case 'MINT':
-                return  <Mint/>
+                return  <Mint/>;
             case 'WORKER':
                 return <Worker/>;
             case 'SWAP':
@@ -40,20 +40,22 @@ export default function Home() {
     };
   return (
       // 屏幕的宽度，布局，
-      <div className="min-h-screen flex flex-col relative"
-           style={{
-               background: `linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), url('/bg_img.png')`,
-               backgroundSize: 'cover',
-               backgroundPosition: 'top center',
-           }}
+      <div className="min-h-screen flex flex-col bg-backgroundSecondary relative overflow-hidden"
       >
+          <img src="/bg_img.png" alt="" className="w-full h-auto absolute left-0 top-0"/>
+          <div className="absolute left-0 top-0 w-full h-full"
+               style={{
+                   background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%)'
+               }}>
+          </div>
           <div className="pointer-events-none">
               <OverlayBackground/>
           </div>
           <div>
               <Navbar onItemClick={handleItemClick}/>
           </div>
-          <div className="z-10 container max-w-[1232px] min-w-[375px] mx-auto flex-grow px-[16px] mt-[76px]  mmd:mt-[90px]">
+          <div
+              className="z-10 container max-w-[1232px] min-w-[375px] mx-auto flex-grow px-[16px] mt-[76px]  mmd:mt-[90px]">
               <TitlePage value={titleValue}/>
               {renderContent()}
               {/*TODO 展示 NoData组件逻辑*/}
