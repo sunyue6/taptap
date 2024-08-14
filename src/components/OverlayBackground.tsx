@@ -6,7 +6,7 @@ const OverlayBackground = () => {
                  style={{
                      position: 'absolute',
                      right: 0,
-                     bottom: 0
+                     bottom: '70px'
                  }}
             >
                 <g filter="url(#filter0_f_91_5499)">
@@ -27,7 +27,7 @@ const OverlayBackground = () => {
                  style={{
                      position: 'absolute',
                      left: 0,
-                     bottom: 0
+                     bottom: '70px'
                  }}
             >
                 <g filter="url(#filter0_f_91_5500)">
@@ -46,7 +46,7 @@ const OverlayBackground = () => {
             <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="752" viewBox="0 0 1440 752" fill="none"
                  style={{
                      position: 'absolute',
-                     bottom: 0
+                     bottom: '70px'
                  }}
             >
                 <g filter="url(#filter0_f_91_5501)">
@@ -67,7 +67,7 @@ const OverlayBackground = () => {
                       style={{
                           position: 'absolute',
                           right: 0,
-                          bottom: 0
+                          bottom: '70px'
                       }}
             >
                 <g filter="url(#filter0_f_91_5502)">
@@ -89,7 +89,6 @@ const OverlayBackground = () => {
                     </linearGradient>
                 </defs>
             </svg>
-
         </div>
 
     );
