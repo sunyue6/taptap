@@ -1,48 +1,53 @@
 "use client"
 import Image from 'next/image';
+import Link from 'next/link';
 import MenuSvg from "@/components/Svg/MenuSvg";
 import MenuCloseSvg from "@/components/Svg/MenuCloseSvg";
 import ChevronRightSvg from "@/components/Svg/ChevronRightSvg";
 import BaseButton from "@/components/Common/Button/BaseButton";
 import WalletAd from "@/components/Navbar/WalletAd";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CloseSvg from "@/components/Svg/CloseSvg";
 import CloseSelectedSvg from "@/components/Svg/CloseSelectedSvg";
 import TelegramSvg from "@/components/Svg/TelegramSvg";
 import TelegramSelectedSvg from "@/components/Svg/TelegramSelectedSvg";
-interface NavbarProps {
-    onItemClick: (item: string) => void;
-}
+import { useRouter } from 'next/navigation';
 
 
-const Navbar: React.FC<NavbarProps> = ({ onItemClick }) => {
+const Navbar: React.FC = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [activeItem, setActiveItem] = useState<string>('DASHBOARD');
+    const [activeItem, setActiveItem] = useState<string>('/');
     const [isWalletConnected, setIsWalletConnected] = useState(false); // 新状态
+    const router = useRouter();
 
     const handleToggleMenu = () => {
         setMenuOpen(prevState => !prevState);
     };
-    const handleNavigation = (url: string) => {
-        window.location.href = url;
-    };
+
+    useEffect(() => {
+        // 确保组件初始时设置为默认页面
+        setActiveItem('/');
+        if (router.pathname !== '/') {
+            router.push('/');
+        }
+    }, [router.pathname]);
 
     const handleItemClick = (item: string) => {
         setActiveItem(item);
-        onItemClick(item);
         setMenuOpen(false);
     };
+
 
     const handleWalletConnectClick = () => {
         setIsWalletConnected(prevState => !prevState); // 切换状态
     };
 
     const navItems = [
-        { label: 'DASHBOARD', value: 'DASHBOARD' },
-        { label: 'MINT', value: 'MINT' },
-        { label: 'WORKER', value: 'WORKER' },
-        { label: 'SWAP', value: 'SWAP' },
-        { label: 'JACKPOT', value: 'JACKPOT' }
+        { label: 'DASHBOARD', value: '/' },
+        { label: 'MINT', value: 'mint' },
+        { label: 'WORKER', value: 'worker' },
+        { label: 'SWAP', value: 'swap' },
+        { label: 'JACKPOT', value: 'jackpot' }
     ];
 
 
@@ -56,17 +61,18 @@ const Navbar: React.FC<NavbarProps> = ({ onItemClick }) => {
                         <div className="text-textPrimary hidden mmd:block text-[30px]">TAPTAP</div>
                     </div>
                     <div className="flex">
-                        <ul className="hidden mmd:flex space-x-4 mmd:mr-[80px]">
+                        <div className="hidden mmd:flex space-x-4 mmd:mr-[80px]">
                             {navItems.map(item => (
-                                <li
+                                <Link
                                     key={item.value}
                                     onClick={() => handleItemClick(item.value)}
+                                    href={item.value}
                                     className={`cursor-pointer ${activeItem === item.value ? 'text-primary' : 'text-white'} hover:text-primaryHover py-[6px] px-[12px] text-[20px]`}
                                 >
                                     {item.label}
-                                </li>
+                                </Link>
                             ))}
-                        </ul>
+                        </div>
                         <div>
                             {isWalletConnected ? (
                                 <WalletAd/> // 当连接时显示 WalletAd
@@ -88,19 +94,20 @@ const Navbar: React.FC<NavbarProps> = ({ onItemClick }) => {
                     </div>
                 </div>
                 <div className={`w-full mmd:hidden font-hanalei  ${menuOpen ? 'block' : 'hidden'} text-textPrimary mt-[32px] pb-[48px]`}>
-                    <ul>
+                    <div>
                         {navItems.map((item, index) => (
-                            <li
+                            <Link
                                 key={item.value}
                                 onClick={() => handleItemClick(item.value)}
+                                href={item.value}
                                 className={`flex items-center justify-between cursor-pointer py-1.5 px-5 ${activeItem === item.value ? 'text-primary' : 'text-white'} hover:text-primaryHover ${index === navItems.length - 1 ? 'mb-0' : 'mb-[20px]'}`}>
                                 <div
                                     className="text-[24px]"
                                 >{item.label}</div>
                                 <ChevronRightSvg className={`text-current`}/>
-                            </li>
+                            </Link>
                         ))}
-                    </ul>
+                    </div>
                 </div>
                 <div className="absolute top-[341px] right-0 hidden mmd:block">
                     <div className="flex flex-col">

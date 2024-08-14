@@ -1,10 +1,12 @@
-import FairMintTapTap from "@/components/Mint/FairMintTapTap";
+"use client"
+import TitlePage from "@/components/TitlePage";
 import MintDetail from "@/components/Mint/MintDetail";
+import FairMintTapTap from "@/components/Mint/FairMintTapTap";
 import NoData from "@/components/NoData";
 const Mint = () => {
     return (
         <div>
-            {/*TODO  MintDetail 与 FairMintTapTap展示逻辑*/}
+            <TitlePage value={'MINT'}/>
             <div className="mb-[12px]">
                 <MintDetail/>
             </div>
@@ -15,4 +17,4 @@ const Mint = () => {
         </div>
     )
 }
-export default Mint
+export default Mint;
