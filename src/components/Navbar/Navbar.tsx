@@ -11,32 +11,32 @@ import CloseSvg from "@/components/Svg/CloseSvg";
 import CloseSelectedSvg from "@/components/Svg/CloseSelectedSvg";
 import TelegramSvg from "@/components/Svg/TelegramSvg";
 import TelegramSelectedSvg from "@/components/Svg/TelegramSelectedSvg";
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 
 const Navbar: React.FC = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [activeItem, setActiveItem] = useState<string>('/');
+    const [activeItem, setActiveItem] = useState<string>('');
     const [isWalletConnected, setIsWalletConnected] = useState(false); // 新状态
     const router = useRouter();
+    const pathname = usePathname(); // 使用 usePathname 钩子
 
     const handleToggleMenu = () => {
         setMenuOpen(prevState => !prevState);
     };
 
     useEffect(() => {
-        // 确保组件初始时设置为默认页面
-        setActiveItem('/');
-        if (router.pathname !== '/') {
-            router.push('/');
+        // 设置 activeItem 为当前路径
+        if (pathname === '/') {
+            setActiveItem(pathname);
+        } else {
+            setActiveItem(pathname.split('/')[1]);
         }
-    }, [router.pathname]);
-
+    }, [pathname]); // 监听 pathname 的变化
     const handleItemClick = (item: string) => {
         setActiveItem(item);
         setMenuOpen(false);
     };
-
 
     const handleWalletConnectClick = () => {
         setIsWalletConnected(prevState => !prevState); // 切换状态
