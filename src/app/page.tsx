@@ -13,10 +13,21 @@ import Swap from "@/components/SWAP/Swap";
 import Worker from "@/components/Worker/Worker";
 export default function Home() {
   const [titleValue, setTitleValue] = useState('DASHBOARD');
+  const [fade, setFade] = useState(false);
+
 
   const handleItemClick = (value: string) => {
-    setTitleValue(value);
+      setTitleValue(value);
+      setFade(true);
   };
+    useEffect(() => {
+        if (fade) {
+            const timeout = setTimeout(() => {
+                setFade(false); // 重置动画状态
+            }, 500); // 动画持续时间应与 Tailwind CSS 中的持续时间相匹配
+            return () => clearTimeout(timeout);
+        }
+    }, [fade]);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -53,7 +64,7 @@ export default function Home() {
               <Navbar onItemClick={handleItemClick}/>
           </div>
           <div
-              className="z-10 container max-w-[1232px] min-w-[375px] mx-auto flex-grow px-[16px] mt-[76px]  mmd:mt-[90px]">
+              className={`z-10 container max-w-[1232px] min-w-[375px] mx-auto flex-grow px-[16px] mt-[76px]  mmd:mt-[90px] ${fade ? 'animate-fade-down' : ''}`}>
               <TitlePage value={titleValue}/>
               {renderContent()}
               {/*TODO 展示 NoData组件逻辑*/}
