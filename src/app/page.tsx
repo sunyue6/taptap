@@ -11,7 +11,6 @@ import NoData from "@/components/NoData";
 import Mint from "@/components/Mint/Mint";
 import Swap from "@/components/SWAP/Swap";
 import Worker from "@/components/Worker/Worker";
-import Tooltip from "@/components/Common/Tooltip";
 export default function Home() {
   const [titleValue, setTitleValue] = useState('DASHBOARD');
 
@@ -40,8 +39,7 @@ export default function Home() {
     };
   return (
       // 屏幕的宽度，布局，
-      <div className="min-h-screen flex flex-col bg-backgroundSecondary relative overflow-hidden"
-      >
+      <div className="min-h-screen flex flex-col bg-backgroundSecondary relative overflow-hidden">
           <img src="/bg_img.png" alt="" className="w-full h-auto absolute left-0 top-0"/>
           <div className="absolute left-0 top-0 w-full h-full"
                style={{

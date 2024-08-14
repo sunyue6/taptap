@@ -34,7 +34,7 @@ const WorkerItem = () => {
                 #00004
             </div>), cRank: '#315,739,255', Reward: '4,722 TAP'},
     ];
-    const progress = 2; // Example progress value
+    const progress = 100; // Example progress value
 
     return (
         <div className="w-full mx-auto max-w-[800px] min-w-[343px] rounded-[32px] bg-backgroundGray backdrop-blur-[16px] font-montserrat font-[700]
@@ -62,29 +62,29 @@ const WorkerItem = () => {
                     <div className="mt-[32px] font-[600]">
                         <TapTable headers={headers} rows={rows}/>
                         <div className="h-[1px]  max-w-[736px] min-w-[303px] bg-backgroundThird mt-[32px] mb-[32px]"></div>
-                        <div className="flex justify-between items-center mb-[16px] mmd:mb-[20px]">
-                            <div>
-                                Number of workers
-                            </div>
-                            <div className="text-textPrimary">111</div>
-                        </div>
+                        {/*<div className="flex justify-between items-center mb-[16px] mmd:mb-[20px]">*/}
+                        {/*    <div>*/}
+                        {/*        Number of workers*/}
+                        {/*    </div>*/}
+                        {/*    <div className="text-textPrimary">111</div>*/}
+                        {/*</div>*/}
                         <div className="flex justify-between items-center mb-[16px] mmd:mb-[20px]">
                             <div>
                                 Term, days
                             </div>
-                            <div className="text-textPrimary">111</div>
+                            <div className="text-textPrimary">1</div>
                         </div>
                         <div className="flex justify-between items-center mb-[16px] mmd:mb-[20px]">
                             <div>
                                 Total Estimated TAPTAP
                             </div>
-                            <div className="text-textPrimary">111</div>
+                            <div className="text-textPrimary">23610</div>
                         </div>
                         <div className="flex justify-between items-center mb-[16px] mmd:mb-[20px]">
                             <div className="w-full mr-[80px]">
                                 <ProgressBar progress={progress} height="10px" color="bg-primary"/>
                             </div>
-                            <div className="text-textPrimary">111</div>
+                            <div className="text-textPrimary">1/1</div>
                         </div>
                         <div className="flex justify-center">
                             <IconButton text="CLAIM"/>

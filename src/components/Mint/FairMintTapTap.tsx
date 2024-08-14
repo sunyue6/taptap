@@ -11,6 +11,7 @@ import IconButton from "@/components/Common/Button/IconButton";
 
 const FairMintTapTap = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [timeLeft, setTimeLeft] = useState(0); // 初始倒计时秒数
     const dropdownRef = useRef<HTMLDivElement>(null);
 
     const toggleDropdown = () => {
@@ -20,6 +21,26 @@ const FairMintTapTap = () => {
         if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
             setIsDropdownOpen(false);
         }
+    };
+
+    useEffect(() => {
+        const initialTime = 24 * 60 * 60;
+        setTimeLeft(initialTime);
+
+        // 倒计时函数
+        const countdown = setInterval(() => {
+            setTimeLeft((prevTime) => prevTime > 0 ? prevTime - 1 : 0);
+        }, 1000);
+
+        return () => clearInterval(countdown); // 清除定时器
+    }, []);
+
+    // 格式化时间为 HH:MM:SS
+    const formatTime = (seconds: number) => {
+        const hours = Math.floor(seconds / 3600);
+        const minutes = Math.floor((seconds % 3600) / 60);
+        const secs = seconds % 60;
+        return `${String(hours).padStart(2, '0')} : ${String(minutes).padStart(2, '0')} : ${String(secs).padStart(2, '0')}`;
     };
 
     useEffect(() => {
@@ -54,15 +75,15 @@ const FairMintTapTap = () => {
                         type="number"
                         min="1"
                         max="100"
-                        className="outline-none border border-textSecondary rounded-[8px] w-[100px] mmd:w-[148px] p-[12px] bg-transparent"/>
+                        className="outline-none border border-textSecondary rounded-[8px] w-[100px] mmd:w-[148px] p-[12px] bg-transparent focus:border-success"/>
                 </div>
                 <div className="flex justify-between items-center mb-[20px]">
                     <div>Global Rank</div>
-                    <div className="text-textPrimary">111</div>
+                    <div className="text-textPrimary">5,000</div>
                 </div>
                 <div className="flex justify-between items-center mb-[20px]">
                     <div>Estimated TAPTAP</div>
-                    <div className="text-textPrimary">111</div>
+                    <div className="text-textPrimary">4,722</div>
                 </div>
                 <div className="flex justify-between items-center mb-[20px]">
                     <div className="flex items-center">Fair mint ends in
@@ -72,7 +93,7 @@ const FairMintTapTap = () => {
                             <QuestionSvg className="ml-[4px]"/>
                         </Tooltip>
                     </div>
-                    <div className="text-textPrimary">111</div>
+                    <div className="text-textPrimary">{formatTime(timeLeft)}</div>
                 </div>
                 <div className="flex justify-between items-center mb-[32px]">
                     <div className="flex items-center">Fair mint Fee
@@ -82,7 +103,7 @@ const FairMintTapTap = () => {
                             <QuestionSvg className="ml-[4px]"/>
                         </Tooltip>
                     </div>
-                    <div className="text-textPrimary">111</div>
+                    <div className="text-textPrimary">0.0023 ETH</div>
                 </div>
                 <div className="flex justify-center mb-[32px]">
                     <IconButton text="FAIR MINT" />

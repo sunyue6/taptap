@@ -27,7 +27,7 @@ const SwapInfo = () => {
                 <div className="mb-[4px]">Sell</div>
                 <div className="flex justify-between items-center mb-[6px]">
                     <input
-                        className="w-[186px] rounded-[8px] bg-transparent outline-none placeholder:text-textPrimary text-[32px] font-[600] text-textPrimary"
+                        className="w-[186px] rounded-[8px] bg-transparent outline-none placeholder:text-textPrimary text-[32px] font-[600] text-textPrimary focus:border-success"
                         defaultValue="122312"
                     />
                     <div>
@@ -74,14 +74,14 @@ const SwapInfo = () => {
             </div>
             <div className="h-[1px]  max-w-[736px] min-w-[303px] bg-backgroundThird mt-[16px] mb-[16px]"></div>
 
-            <div className="flex justify-between items-center text-[12px] mb-[16px]">
+            <div className="flex justify-between items-center text-[12px] mb-[16px] text-textPrimary">
                 <div>
                     1 TAP = 0.00000006312 ETH
                    <span className="text-backgroundThird ml-[10px]">
                         ($1.00)
                    </span>
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center text-backgroundThird">
                     <GasStationSvg className="mr-[4px]"/>
                     $6.97
                 </div>
