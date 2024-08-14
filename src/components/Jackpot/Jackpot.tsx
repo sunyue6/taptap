@@ -8,13 +8,13 @@ import IconButton from "@/components/Common/Button/IconButton";
 import KeySvg from "@/components/Svg/KeySvg";
 import DropdownMenu from "@/components/DropdownMenu";
 import Tooltip from "@/components/Common/Tooltip";
-
-
+import useCountdown from "@/hook/useCountdown";
 
 
 const Jackpot = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
+    const { formattedTime } = useCountdown(24 * 60 * 60); // 传入初始秒数
 
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
@@ -103,7 +103,7 @@ const Jackpot = () => {
                             </Tooltip>
                         </div>
                         <div className="text-textPrimary text-[48px]">
-                            24 :59: 59
+                            {formattedTime}
                         </div>
                     </div>
                     <div className="w-1/2">
