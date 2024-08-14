@@ -1,5 +1,6 @@
 import FairMintTapTap from "@/components/Mint/FairMintTapTap";
 import MintDetail from "@/components/Mint/MintDetail";
+import NoData from "@/components/NoData";
 const Mint = () => {
     return (
         <div>
@@ -7,7 +8,10 @@ const Mint = () => {
             <div className="mb-[12px]">
                 <MintDetail/>
             </div>
-            <FairMintTapTap/>
+            <div className="mb-[12px]">
+                <FairMintTapTap/>
+            </div>
+            <NoData/>
         </div>
     )
 }
