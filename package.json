@@ -13,10 +13,6 @@
     "@fontsource-variable/montserrat": "^5.0.19",
     "@fontsource/covered-by-your-grace": "^5.0.12",
     "@fontsource/hanalei-fill": "^5.0.20",
-    "apexcharts": "^3.52.0",
-    "chart.js": "^4.4.3",
-    "echarts": "^5.5.1",
-    "lightweight-charts": "^4.2.0",
     "lodash": "^4.17.21",
     "next": "14.2.5",
     "next-images": "^1.8.5",
@@ -34,6 +30,7 @@
     "eslint-config-next": "14.2.5",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
+    "tailwindcss-animated": "^1.1.2",
     "typescript": "^5"
   }
 }

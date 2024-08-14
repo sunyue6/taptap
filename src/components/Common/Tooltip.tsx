@@ -30,7 +30,7 @@ const getTooltipPositionClasses = (position: 'top' | 'right' | 'bottom' | 'left'
         case 'right':
             return 'top-1/2 left-full transform -translate-y-1/2';
         case 'bottom':
-            return `${leftClass} top-[18px] mmd:left-[4px] mmd:top-[18px]`
+            return `${leftClass} top-[18px] mmd:left-[4px] mmd:top-[18px] animate-fade-right`
         case 'left':
             return 'top-1/2 left-[-100%] transform -translate-y-1/2';
         default:

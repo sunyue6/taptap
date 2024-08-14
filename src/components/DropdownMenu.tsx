@@ -8,7 +8,7 @@ interface DropdownMenuProps {
 
 const DropdownMenu: FC<DropdownMenuProps> = ({ onClose }) => {
     return (
-        <div className=" absolute right-0 rounded-[12px] p-[12px] bg-backgroundSecondary text-textPrimary text-[16px] font-medium font-montserrat">
+        <div className=" absolute right-0 rounded-[12px] p-[12px] bg-backgroundSecondary text-textPrimary text-[16px] font-medium font-montserrat animate-fade-left">
             <button
                 className="flex items-center w-full text-left p-[16px] rounded-[12px] hover:bg-backgroundGray whitespace-nowrap"
                 onClick={onClose}
