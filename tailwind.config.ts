@@ -1,10 +1,9 @@
 import type { Config } from "tailwindcss";
 
 const config: {
-  plugins: any[];
+  plugins: { handler: () => void }[];
   theme: {
     extend: {
-      fontFamily: { spartan: string[]; coveredByYourGrace: string[]; montserrat: string[]; hanalei: string[] };
       screens: { mmd: string };
       backgroundImage: { "gradient-conic": string; "gradient-radial": string };
       colors: {
@@ -35,12 +34,6 @@ const config: {
     extend: {
       screens: {
         'mmd': '995px',
-      },
-      fontFamily: {
-        hanalei: ['"Hanalei Fill"', 'cursive'],
-        montserrat: ['"Montserrat Variable"', 'sans-serif'],
-        coveredByYourGrace: ['"Covered By Your Grace"', 'cursive'],
-        spartan: ['"League Spartan Variable"'],
       },
       colors: {
         primary: '#E91898',
