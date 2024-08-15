@@ -25,7 +25,9 @@ export default function RootLayout({
           <Image
             src="/bg_img.png"
             alt=""
-            layout="fill"
+            width={1874}
+            height={1071}
+            layout="responsive"
             objectFit="cover"
             className="w-full h-auto absolute left-0 top-0"
           />
